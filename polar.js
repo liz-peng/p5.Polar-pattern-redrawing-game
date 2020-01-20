@@ -104,11 +104,9 @@ p5.prototype.polarPentagon = function(_angle, _radius, _distance) {
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle)+60);
   this.beginShape();
-    for(let i=0; i<5; i++) {
-      this.vertex(
-        this.cos(this.TWO_PI*i/5)*_radius, this.sin(this.TWO_PI*i/5)*_radius
-      );
-    }
+  for(let i=1; i<=5; i++) {
+    this.vertex(this.cos(this.TWO_PI*i/5)*_radius, this.sin(this.TWO_PI*i/5)*_radius);
+  }
   this.endShape(this.CLOSE);
 }
 
@@ -158,11 +156,9 @@ p5.prototype.polarHeptagon = function(_angle, _radius, _distance) {
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle)+11);
   this.beginShape();
-    for(let i=0; i<7; i++) {
-      this.vertex(
-        this.cos(this.TWO_PI*i/7)*_radius, this.sin(this.TWO_PI*i/7)*_radius
-      );
-    }
+  for(let i=1; i<=7; i++) {
+    this.vertex(this.cos(this.TWO_PI*i/7)*_radius, this.sin(this.TWO_PI*i/7)*_radius);
+  }
   this.endShape(this.CLOSE);
 }
 
@@ -185,11 +181,9 @@ p5.prototype.polarOctagon = function(_angle, _radius, _distance) {
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
   this.beginShape();
-    for(let i=0; i<8; i++) {
-      this.vertex(
-        this.cos(this.TWO_PI*i/8)*_radius, this.sin(this.TWO_PI*i/8)*_radius
-      );
-    }
+  for(let i=1; i<=8; i++) {
+    this.vertex(this.cos(this.TWO_PI*i/8)*_radius, this.sin(this.TWO_PI*i/8)*_radius);
+  }
   this.endShape(this.CLOSE);
 }
 
@@ -210,10 +204,8 @@ p5.prototype.polarPolygon = function(_edge, _angle, _radius) {
   this.translate(polar.center.x, polar.center.y);
   this.rotate(this.radians(_angle));
   this.beginShape();
-    for(let i=0; i<_edge; i++) {
-      this.vertex(
-        this.cos(this.TWO_PI*i/_edge)*_radius, this.sin(TWO_PI*i/_edge)*_radius
-      );
-    }
-  this.endShape(this.CLOSE);
+  for(let i=1; i<=_edge; i++) {
+    this.vertex(this.cos(this.TWO_PI*i/_edge)*_radius, this.sin(this.TWO_PI*i/_edge)*_radius);
+  }
+  this.endShape(CLOSE);
 }

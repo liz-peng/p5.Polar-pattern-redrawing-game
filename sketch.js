@@ -11,7 +11,7 @@ let sketch1 = function(p) {
   }; 
 
   p.draw = function() {
-    p.polarTriangle(0, 100, 0);
+    p.polarTriangle(0, 80, 0);
   };
 };
 let example1 = new p5(sketch1, 'sketch1');
@@ -29,7 +29,7 @@ let sketch2 = function(p) {
   }; 
 
   p.draw = function() {
-    p.polarTriangles(2, 100, 0);
+    p.polarTriangles(2, 80, 0);
   };
 };
 let example2 = new p5(sketch2, 'sketch2');
@@ -47,8 +47,27 @@ let sketch3 = function(p) {
   }; 
 
   p.draw = function() {
-    p.polarEllipse(0, 50, -50);
-    p.polarTriangles(2, 100, 0);
+    p.polarTriangles(2, 80, 0);
+    p.polarEllipse(0, 40, -40);
   };
 };
 let example3 = new p5(sketch3, 'sketch3');
+
+// example 4
+let sketch4 = function(p) { 
+  p.setup = function() {
+    let w = document.getElementById('sketch4').clientWidth;
+    let h = document.getElementById('sketch4').clientHeight;
+    p.createCanvas(w, h);
+    p.noFill();
+    p.stroke('#ccc');
+    p.strokeWeight(0.5); 
+    polar.setCenter(w/2, h/2);
+  }; 
+
+  p.draw = function() {
+    p.polarTriangles(2, 80, 0);
+    p.polarEllipses(6, 40, 40);
+  };
+};
+let example4 = new p5(sketch4, 'sketch4');

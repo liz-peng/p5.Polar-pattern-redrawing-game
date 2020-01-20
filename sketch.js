@@ -71,3 +71,23 @@ let sketch4 = function(p) {
   };
 };
 let example4 = new p5(sketch4, 'sketch4');
+
+// example 5
+let sketch5 = function(p) { 
+  p.setup = function() {
+    let w = document.getElementById('sketch5').clientWidth;
+    let h = document.getElementById('sketch5').clientHeight;
+    p.createCanvas(w, h);
+    p.noFill();
+    p.stroke('#ccc');
+    p.strokeWeight(0.5); 
+    polar.setCenter(w/2, h/2);
+  }; 
+
+  p.draw = function() {
+    p.polarTriangles(2, 80, 0);
+    p.polarEllipses(6, 40, 40);
+    p.polarLines(3, 100, 0);
+  };
+};
+let example5 = new p5(sketch5, 'sketch5');

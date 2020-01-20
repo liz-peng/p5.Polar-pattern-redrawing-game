@@ -91,3 +91,24 @@ let sketch5 = function(p) {
   };
 };
 let example5 = new p5(sketch5, 'sketch5');
+
+// example 6
+let sketch6 = function(p) { 
+  p.setup = function() {
+    let w = document.getElementById('sketch6').clientWidth;
+    let h = document.getElementById('sketch6').clientHeight;
+    p.createCanvas(w, h);
+    p.noFill();
+    p.stroke('#ccc');
+    p.strokeWeight(0.5); 
+    polar.setCenter(w/2, h/2);
+  }; 
+
+  p.draw = function() {
+    p.polarTriangles(2, 80, 0);
+    p.polarEllipses(6, 40, 40);
+    p.polarLines(3, 100, 0);
+    p.polarEllipses(6, 10, 100);
+  };
+};
+let example6 = new p5(sketch6, 'sketch6');

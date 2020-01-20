@@ -108,7 +108,30 @@ let sketch6 = function(p) {
     p.polarTriangles(2, 80, 0);
     p.polarEllipses(6, 40, 40);
     p.polarLines(3, 100, 0);
-    p.polarEllipses(6, 10, 100);
+    p.polarEllipses(6, 8, 100);
   };
 };
 let example6 = new p5(sketch6, 'sketch6');
+
+
+// example 7
+let sketch7 = function(p) { 
+  p.setup = function() {
+    let w = document.getElementById('sketch7').clientWidth;
+    let h = document.getElementById('sketch7').clientHeight;
+    p.createCanvas(w, h);
+    p.noFill();
+    p.stroke('#ccc');
+    p.strokeWeight(0.5); 
+    polar.setCenter(w/2, h/2);
+  }; 
+
+  p.draw = function() {
+    p.polarTriangles(2, 80, 0);
+    p.polarEllipses(6, 40, 40);
+    p.polarLines(3, 100, 0);
+    p.polarEllipses(6, 8, 100);
+    p.polarHexagon(30, 80, 0);
+  };
+};
+let example7 = new p5(sketch7, 'sketch7');

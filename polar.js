@@ -79,7 +79,7 @@ p5.prototype.polarLines = function(_num, _radius, _distance, callback) {
 p5.prototype.polarSquare = function(_angle, _radius, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
-  const _radians = radians(_angle);
+  const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*_distance);
   this.rotate(this.radians(_angle));
   this.square(-_radius, -_radius, _radius*2);
@@ -100,7 +100,7 @@ p5.prototype.polarSquares = function(_num, _radius, _distance, callback) {
 p5.prototype.polarPentagon = function(_angle, _radius, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
-  const _radians = radians(_angle);
+  const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle)+60);
   this.beginShape();
@@ -109,7 +109,7 @@ p5.prototype.polarPentagon = function(_angle, _radius, _distance) {
         this.cos(this.TWO_PI*i/5)*_radius, this.sin(this.TWO_PI*i/5)*_radius
       );
     }
-  this.endShape(CLOSE);
+  this.endShape(this.CLOSE);
 }
 
 p5.prototype.polarPentagons = function(_num, _radius, _distance, callback) {
@@ -127,7 +127,7 @@ p5.prototype.polarPentagons = function(_num, _radius, _distance, callback) {
 p5.prototype.polarHexagon = function(_angle, _radius, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
-  const _radians = radians(_angle);
+  const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
   this.beginShape();
@@ -136,7 +136,7 @@ p5.prototype.polarHexagon = function(_angle, _radius, _distance) {
         this.cos(this.TWO_PI*i/6)*_radius, this.sin(this.TWO_PI*i/6)*_radius
       );
     }
-  this.endShape(CLOSE);
+  this.endShape(this.CLOSE);
 }
 
 p5.prototype.polarHexagons = function(_num, _radius, _distance, callback) {
@@ -154,7 +154,7 @@ p5.prototype.polarHexagons = function(_num, _radius, _distance, callback) {
 p5.prototype.polarHeptagon = function(_angle, _radius, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
-  const _radians = radians(_angle);
+  const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle)+11);
   this.beginShape();
@@ -163,7 +163,7 @@ p5.prototype.polarHeptagon = function(_angle, _radius, _distance) {
         this.cos(this.TWO_PI*i/7)*_radius, this.sin(this.TWO_PI*i/7)*_radius
       );
     }
-  this.endShape(CLOSE);
+  this.endShape(this.CLOSE);
 }
 
 p5.prototype.polarHeptagons = function(_num, _radius, _distance, callback) {
@@ -181,7 +181,7 @@ p5.prototype.polarHeptagons = function(_num, _radius, _distance, callback) {
 p5.prototype.polarOctagon = function(_angle, _radius, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
-  const _radians = radians(_angle);
+  const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
   this.beginShape();
@@ -190,7 +190,7 @@ p5.prototype.polarOctagon = function(_angle, _radius, _distance) {
         this.cos(this.TWO_PI*i/8)*_radius, this.sin(this.TWO_PI*i/8)*_radius
       );
     }
-  this.endShape(CLOSE);
+  this.endShape(this.CLOSE);
 }
 
 p5.prototype.polarOctagons = function(_num, _radius, _distance, callback) {
@@ -215,5 +215,5 @@ p5.prototype.polarPolygon = function(_edge, _angle, _radius) {
         this.cos(this.TWO_PI*i/_edge)*_radius, this.sin(TWO_PI*i/_edge)*_radius
       );
     }
-  this.endShape(CLOSE);
+  this.endShape(this.CLOSE);
 }

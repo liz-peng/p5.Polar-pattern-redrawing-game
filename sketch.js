@@ -135,3 +135,26 @@ let sketch7 = function(p) {
   };
 };
 let example7 = new p5(sketch7, 'sketch7');
+
+// example 8
+let sketch8 = function(p) { 
+  p.setup = function() {
+    let w = document.getElementById('sketch8').clientWidth;
+    let h = document.getElementById('sketch8').clientHeight;
+    p.createCanvas(w, h);
+    p.noFill();
+    p.stroke('#ccc');
+    p.strokeWeight(0.5); 
+    polar.setCenter(w/2, h/2);
+  }; 
+
+  p.draw = function() {
+    p.polarTriangles(2, 80, 0);
+    p.polarEllipses(6, 40, 40);
+    p.polarLines(3, 100, 0);
+    p.polarEllipses(6, 8, 100);
+    p.polarHexagon(30, 80, 0);
+    p.polarHexagon(30, 92, 0);
+  };
+};
+let example8 = new p5(sketch8, 'sketch8');

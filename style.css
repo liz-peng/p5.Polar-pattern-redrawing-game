@@ -7,7 +7,7 @@ body {
 }
 
 hr {
-	border: 0.5px solid #9fabba; 
+  border: 0.5px solid #9fabba; 
 }
 
 #container {
@@ -37,17 +37,21 @@ hr {
 }
 
 #console span {
-	padding-left: 8px;
-	font-size: 14px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+#msg {
+  color: #9fabba;
+  padding-left: 8px;
 }
 
 #polar {
   grid-area: polar;
-  overflow: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-	text-align: center;
+  text-align: center;
 }
 
 .col1, .col2, .col3 {
@@ -69,7 +73,7 @@ hr {
 }
 
 .CodeMirror-gutters {
-	border-right: 0px !important;
+  border-right: 0px !important;
   background-color: #112D4F !important;
 }
 
@@ -79,5 +83,5 @@ hr {
 }
 
 .cm-s-tomorrow-night-bright span.cm-comment { 
-	color: #848484 !important;
+  color: #848484 !important;
 }

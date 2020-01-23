@@ -12,29 +12,29 @@
     <div id='container'>
       <div id='codemirror'></div>
       <div id='console'>
-      	<span>Console</span>
-      	<hr>
+        <span>Console</span>
+        <hr>
+        <div id="msg"></div>
       </div>
       <div id='polar'>
-      	<div id='sketch1' class='col1'></div>
+        <div id='sketch1' class='col1'></div>
         <div id='sketch2' class='col2'></div>
-      	<div id='sketch3' class='col3'></div>
-      	<div id='sketch4' class='col1'></div>
-      	<div id='sketch5' class='col2'></div>
-      	<div id='sketch6' class='col3'></div>
-      	<div id='sketch7' class='row3'></div>
-      	<div id='sketch8' class='row3'></div>
-      	<div id='sketch9' class='row3'></div>
+        <div id='sketch3' class='col3'></div>
+        <div id='sketch4' class='col1'></div>
+        <div id='sketch5' class='col2'></div>
+        <div id='sketch6' class='col3'></div>
+        <div id='sketch7' class='row3'></div>
+        <div id='sketch8' class='row3'></div>
+        <div id='sketch9' class='row3'></div>
       </div>
     </div>
   </body>
   <script>
     window.onload = function() {
-      console.log('Welcome to p5.Polar')
-      let val = `/* Welcome to p5.Polar */
+      let value = `/* Welcome to p5.Polar */
 
 function draw() {
-	// type your code here
+  // type your code here
 }`;
       const editor = CodeMirror(document.querySelector('#codemirror'), { 
         // value: '// type your code here',
@@ -44,14 +44,16 @@ function draw() {
         theme: 'tomorrow-night-bright'
       });
 
-      editor.setValue(val);
+      editor.setValue(value);
+      console.log(editor.getValue())
 
       editor.setOption('extraKeys', {
         'Shift-Enter': function(cm) {
           try {
             eval(cm.getValue());
-          } catch (e) {
-            document.querySelector('#console').innerText = e;
+          } 
+          catch (error) {
+            document.getElementById('msg').innerText = error;
           }
         }
       });

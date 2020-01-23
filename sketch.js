@@ -5,7 +5,7 @@ let sketch1 = function(p) {
   	let h = document.getElementById('sketch1').clientHeight;
   	p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -23,7 +23,7 @@ let sketch2 = function(p) {
   	let h = document.getElementById('sketch2').clientHeight;
   	p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -41,7 +41,7 @@ let sketch3 = function(p) {
     let h = document.getElementById('sketch3').clientHeight;
     p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -60,7 +60,7 @@ let sketch4 = function(p) {
     let h = document.getElementById('sketch4').clientHeight;
     p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -79,7 +79,7 @@ let sketch5 = function(p) {
     let h = document.getElementById('sketch5').clientHeight;
     p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -99,7 +99,7 @@ let sketch6 = function(p) {
     let h = document.getElementById('sketch6').clientHeight;
     p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -121,7 +121,7 @@ let sketch7 = function(p) {
     let h = document.getElementById('sketch7').clientHeight;
     p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -143,7 +143,7 @@ let sketch8 = function(p) {
     let h = document.getElementById('sketch8').clientHeight;
     p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 
@@ -166,7 +166,7 @@ let sketch9 = function(p) {
     let h = document.getElementById('sketch9').clientHeight;
     p.createCanvas(w, h);
     p.noFill();
-    p.stroke('#ccc');
+    p.stroke('#9fabba');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
   }; 

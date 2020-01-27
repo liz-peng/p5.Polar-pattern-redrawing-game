@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <script src='../codemirror/lib/codemirror.js'></script>
+    <link href='./lv1_ellipse.css' rel='stylesheet'>
+    <link href='../codemirror/lib/codemirror.css' rel='stylesheet'>
+    <script src="../codemirror/mode/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="../polar.js"></script>
+    <script src="./lv1_ellipse.js"></script>
+    <script src="https://bundle.run/pixelmatch"></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='codemirror'></div>
+      <div id='console'>
+        <span>Console</span>
+        <hr>
+        <div id="msg"></div>
+      </div>
+      <div id='userDrawing'>
+        <div id='draw1' class=''></div>
+      </div>
+      <div id='polarExample'>
+        <div id='sketch1' class=''></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.onload = function() {
+      const editor = CodeMirror(document.querySelector('#codemirror'), { 
+        value: '/* Welcome to p5.Polar */\n\n'
+          + 'function draw() {\n'
+          + '  const ellipseRadius = 200;\n'
+          + '  // type your code here\n'
+          + '}',
+        mode: 'javascript',
+        lineNumbers: true,
+        autofocus: true,
+        theme: 'tomorrow-night-bright'
+      });
+
+      editor.setOption('extraKeys', {
+        'Shift-Enter': function(cm) {
+          try {
+            if(document.getElementById('defaultCanvas1')) {
+              document.getElementById('defaultCanvas1').remove();
+            } 
+            // let val = cm.getRange({line: 4, ch: 0}, {line: cm.lineCount()-1, ch: 0});
+            let userInput = cm.getValue();
+            userInput = userInput.split(/\n/).map(
+              line => line.includes('polar') ? 's.' + line.trim() : ''
+            ).join('\n');
+            
+            let draw1 = function(s) { 
+              s.setup = function() {
+                let w = document.getElementById('draw1').clientWidth;
+                let h = document.getElementById('draw1').clientHeight;
+                s.createCanvas(w, h);
+                s.noFill();
+                s.stroke('#8896a7');
+                s.strokeWeight(0.5); 
+                polar.setCenter(w/2, h/2);
+              }; 
+              s.draw = function() {
+                const ellipseRadius = 200;
+                eval(userInput);
+              }
+            };
+            let userDrawing1 = new p5(draw1, 'draw1');
+
+            let c1 = document.getElementById('defaultCanvas0');
+            let c2 = document.getElementById('defaultCanvas1');
+            let ctx1 = c1.getContext('2d');
+            let ctx2 = c2.getContext('2d');
+            let same = true;
+            setTimeout(function compare(imageData1, imageData2) {
+              let imageData1 = ctx1.getImageData(0, 0, c1.width, c1.height).data;
+              let imageData2 = ctx2.getImageData(0, 0, c2.width, c2.height).data;
+              for (let i = 0; i < imageData1.length; i++) {
+                if (imageData1[i] !== imageData2[i]) {
+                  same = false;
+                  break;
+                }
+              }
+              console.log(same ? 'same' : 'different');
+            }, 3000);
+          }
+          catch (error) {
+            document.getElementById('msg').innerText = error;
+          }
+        }
+      });
+    }
+  </script>
+</html>

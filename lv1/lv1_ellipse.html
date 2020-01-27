@@ -68,21 +68,21 @@
             };
             let userDrawing1 = new p5(draw1, 'draw1');
 
-            let c1 = document.getElementById('defaultCanvas0');
-            let c2 = document.getElementById('defaultCanvas1');
-            let ctx1 = c1.getContext('2d');
-            let ctx2 = c2.getContext('2d');
-            let same = true;
-            setTimeout(function compare(imageData1, imageData2) {
-              let imageData1 = ctx1.getImageData(0, 0, c1.width, c1.height).data;
-              let imageData2 = ctx2.getImageData(0, 0, c2.width, c2.height).data;
-              for (let i = 0; i < imageData1.length; i++) {
-                if (imageData1[i] !== imageData2[i]) {
-                  same = false;
+            let exp1 = document.getElementById('defaultCanvas0');
+            let drw1 = document.getElementById('defaultCanvas1');
+            let exp1Context = exp1.getContext('2d');
+            let drw1Context = drw1.getContext('2d');
+            let isSame = true;
+            setTimeout(function compare(expData, drwData) {
+              expData = exp1Context.getImageData(0, 0, exp1.width, exp1.height).data;
+              drwData = drw1Context.getImageData(0, 0, drw1.width, drw1.height).data;
+              for (let i=0; i<expData.length; i++) {
+                if (expData[i] !== drwData[i]) {
+                  isSame = false;
                   break;
                 }
               }
-              console.log(same ? 'same' : 'different');
+              console.log(isSame ? 'same' : 'diff');
             }, 3000);
           }
           catch (error) {

@@ -20,18 +20,14 @@
       <div id='userDrawing'>
         <div id='draw1' class='col1-row1'></div>
         <div id='draw2' class='col2-row1'></div>
-        <div id='draw3' class='col3-row1'></div>
-        <div id='draw4' class='col1-row2'></div>
-        <div id='draw5' class='col2-row2'></div>
-        <div id='draw6' class='col3-row2'></div>
+        <div id='draw3' class='col1-row2'></div>
+        <div id='draw4' class='col2-row2'></div>
       </div>
       <div id='polarExample'>
         <div id='sketch1' class='col1-row1'></div>
         <div id='sketch2' class='col2-row1'></div>
-        <div id='sketch3' class='col3-row1'></div>
-        <div id='sketch4' class='col1-row2'></div>
-        <div id='sketch5' class='col2-row2'></div>
-        <div id='sketch6' class='col3-row2'></div>
+        <div id='sketch3' class='col1-row2'></div>
+        <div id='sketch4' class='col2-row2'></div>
       </div>
     </div>
   </body>
@@ -40,7 +36,7 @@
       const editor = CodeMirror(document.querySelector('#codemirror'), { 
         value: '/* Welcome to p5.Polar */\n\n'
           + 'function draw() {\n'
-          + '  const ellipseRadius = 200;\n'
+          + '  const ellipseRadius = 60;\n'
           + '  // type your code here\n'
           + '}',
         mode: 'javascript',
@@ -52,10 +48,13 @@
       editor.setOption('extraKeys', {
         'Shift-Enter': function(cm) {
           try {
-            if(document.getElementById('defaultCanvas1')) {
-              document.getElementById('defaultCanvas1').remove();
+            let userDrawing1;
+
+            if(document.getElementById('defaultCanvas4')) {
+              document.getElementById('defaultCanvas4').remove();
+              document.getElementById('msg').innerText = '';
             } 
-            // let val = cm.getRange({line: 4, ch: 0}, {line: cm.lineCount()-1, ch: 0});
+
             let userInput = cm.getValue();
             userInput = userInput.split(/\n/).map(
               line => line.includes('polar') ? 's.' + line.trim() : ''
@@ -63,8 +62,8 @@
             
             let draw1 = function(s) { 
               s.setup = function() {
-                let w = document.getElementById('draw1').clientWidth;
-                let h = document.getElementById('draw1').clientHeight;
+                let w = document.getElementById('sketch1').clientWidth;
+                let h = document.getElementById('sketch1').clientHeight;
                 s.createCanvas(w, h);
                 s.noFill();
                 s.stroke('#8896a7');
@@ -72,14 +71,14 @@
                 polar.setCenter(w/2, h/2);
               }; 
               s.draw = function() {
-                const ellipseRadius = 200;
+                const ellipseRadius = 60;
                 eval(userInput);
               }
             };
-            let userDrawing1 = new p5(draw1, 'draw1');
+            userDrawing1 = new p5(draw1, 'draw1');
 
             let exp1 = document.getElementById('defaultCanvas0');
-            let drw1 = document.getElementById('defaultCanvas1');
+            let drw1 = document.getElementById('defaultCanvas4');
             let exp1Context = exp1.getContext('2d');
             let drw1Context = drw1.getContext('2d');
             let isSame = true;
@@ -92,7 +91,12 @@
                   break;
                 }
               }
-              console.log(isSame ? 'same' : 'diff');
+              document.getElementById('msg').innerText = isSame ? 'Same' : 'Different';
+              
+              if(isSame === true) {
+                userDrawing1.drawingContext.strokeStyle = '#F26522';
+                userDrawing1.drawingContext.lineWidth = '2';
+              }
             }, 3000);
           }
           catch (error) {

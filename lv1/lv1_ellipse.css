@@ -47,7 +47,7 @@ hr {
 #userDrawing {
   grid-area: polar;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   text-align: center;
   z-index: 2;
@@ -56,25 +56,25 @@ hr {
 #polarExample {
   grid-area: polar;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   text-align: center;
   z-index: 1;
 }
 
-.col1-row1, .col2-row1 {
-  border-right: 0.5px solid #9fabba;
-  border-bottom: 0.5px solid #9fabba;
+.col1-row1 {
+  border-right: 0.2px solid #9fabba;
+  border-bottom: 0.2px solid #9fabba;
   text-align: center;
 }
 
-.col3-row1 {
-  border-bottom: 0.5px solid #9fabba;
+.col2-row1 {
+  border-bottom: 0.2px solid #9fabba;
   text-align: center;
 }
 
-.col1-row2, .col2-row2 {
-  border-right: 0.5px solid #9fabba;
+.col1-row2 {
+  border-right: 0.2px solid #9fabba;
   text-align: center;
 }
 

@@ -28,16 +28,16 @@ const lv1_1 = (userInput, cm) => {
       polar.setCenter(w/2, h/2);
       if(!lv1_1Ans) {
       	s.stroke('#ccc');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
       	const ellipseRadius = 50;
 	      eval(userInput.join());
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
 	    else {
 	    	s.stroke('#F26522');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
 	      s.polarEllipse(0, 50, 0);
-	      example1.drawingContext.lineWidth = 2;
+	      example1.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_2Val = '/*\n'
@@ -92,7 +92,7 @@ const lv1_2 = (userInput, cm) => {
       polar.setCenter(w/2, h/2);
       if(!lv1_2Ans) {
       	s.stroke('#ccc');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
       	const ellipseAngle = 30;
   			const ellipseRadius = 50;
 	      eval(userInput.join());
@@ -100,9 +100,9 @@ const lv1_2 = (userInput, cm) => {
 	    }
 	    else {
 	    	s.stroke('#F26522');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
 	      s.polarEllipse(30, 50, 0);
-	      example2.drawingContext.lineWidth = 2;
+	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_3Val = '/*\n'
@@ -164,7 +164,7 @@ const lv1_3 = (userInput, cm) => {
       polar.setCenter(w/2, h/2);
       if(!lv1_3Ans) {
       	s.stroke('#ccc');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
       	const ellipseRadius = 50;
   			const ellipseDistanceA = 50;
   			const ellipseDistanceB = -50;
@@ -173,10 +173,10 @@ const lv1_3 = (userInput, cm) => {
 	    }
 	    else {
 	    	s.stroke('#F26522');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
 	      s.polarEllipse(0, 50, 50);
   			s.polarEllipse(0, 50, -50);
-	      example3.drawingContext.lineWidth = 2;
+	      example3.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_4Val = '/*\n'
@@ -234,7 +234,7 @@ const lv1_4 = (userInput, cm) => {
       polar.setCenter(w/2, h/2);
       if(!lv1_4Ans) {
       	s.stroke('#ccc');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
       	const ellipseNum = 2;
 	      const ellipseRadius = 50;
 	      const ellipseDistance = 50;
@@ -243,9 +243,9 @@ const lv1_4 = (userInput, cm) => {
 	    }
 	    else {
 	    	s.stroke('#F26522');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
 	      s.polarEllipses(2, 50, 50);
-	      example4.drawingContext.lineWidth = 2;
+	      example4.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_5Val = '/*\n'
@@ -303,7 +303,7 @@ const lv1_5 = (userInput, cm) => {
       polar.setCenter(w/2, h/2);
       if(!lv1_5Ans) {
       	s.stroke('#ccc');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
       	const ellipseNum = 10;
 	      const ellipseRadius = 50;
 	      const ellipseDistance = 50;
@@ -312,9 +312,9 @@ const lv1_5 = (userInput, cm) => {
 	    }
 	    else {
 	    	s.stroke('#F26522');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
 	      s.polarEllipses(10, 50, 50);
-	      example5.drawingContext.lineWidth = 2;
+	      example5.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_6Val = '/*\n'
@@ -356,7 +356,7 @@ const lv1_6 = (userInput, cm) => {
 	).map(substr =>
 		substr.replace('ellipseDistance', '50')
 	);
-	
+
 	if(document.getElementById('defaultCanvas11')) {
     document.getElementById('defaultCanvas11').remove();
     document.getElementById('msg').innerText = '';
@@ -378,7 +378,7 @@ const lv1_6 = (userInput, cm) => {
       polar.setCenter(w/2, h/2);
       if(!lv1_6Ans) {
       	s.stroke('#ccc');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
       	const ellipseNum = 20;
 	      const ellipseRadiusA = 25;
 	      const ellipseRadiusB = 50;
@@ -388,10 +388,10 @@ const lv1_6 = (userInput, cm) => {
 	    }
 	    else {
 	    	s.stroke('#F26522');
-      	s.strokeWeight(2); 
+      	s.strokeWeight(1); 
 	      s.polarEllipses(20, 25, 50);
     		s.polarEllipses(20, 50, 50);
-	      example6.drawingContext.lineWidth = 2;
+	      example6.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	    }
     }; 

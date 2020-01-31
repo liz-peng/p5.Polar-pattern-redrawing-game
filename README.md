@@ -10,7 +10,7 @@ This is a web editor (live coding environment) that helps [p5.js](https://p5js.o
 
 ![alt text](https://i.imgur.com/hF9WS0R.png "p5.Polar web editor") 
 
-![alt text](https://i.imgur.com/FBZyy0T.png "level 1 demo") 
+![alt text](https://i.imgur.com/tpGcKu0.png "level 1 demo") 
 
 ![alt text](https://i.imgur.com/UWCi7JS.png "level 1 demo") 
 

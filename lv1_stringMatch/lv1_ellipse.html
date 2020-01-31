@@ -1,0 +1,233 @@
+<html>
+  <head>
+    <script src='../codemirror/lib/codemirror.js'></script>
+    <link href='./lv1_ellipse.css' rel='stylesheet'>
+    <link href='../codemirror/lib/codemirror.css' rel='stylesheet'>
+    <script src="../codemirror/mode/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="../polar.js"></script>
+    <script src="./lv1_example.js"></script>
+    <script src="./lv1_pattern.js"></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='codemirror'></div>
+      <div id='console'>
+        <span>Console</span>
+        <hr>
+        <div id="msg"></div>
+      </div>
+      <div id='userDrawing'>
+        <div id='draw1' class='col1-row1'></div>
+        <div id='draw2' class='col2-row1'></div>
+        <div id='draw3' class='col3-row1'></div>
+        <div id='draw4' class='col1-row2'></div>
+        <div id='draw5' class='col2-row2'></div>
+        <div id='draw6' class='col3-row2'></div>
+      </div>
+      <div id='polarExample'>
+        <div id='sketch1' class='col1-row1'></div>
+        <div id='sketch2' class='col2-row1'></div>
+        <div id='sketch3' class='col3-row1'></div>
+        <div id='sketch4' class='col1-row2'></div>
+        <div id='sketch5' class='col2-row2'></div>
+        <div id='sketch6' class='col3-row2'></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const editor = CodeMirror(document.querySelector('#codemirror'), { 
+        value: '/*\n'
+          + 'Welcome to p5.Polar (*´▽`*)\n\n'
+          + 'This is a playground for learning how to draw patterns with p5.Polar library.\n\n'
+          + 'You’re watching the coding area, the right hand side are example images that shows how you can draw a pattern from a single shape.\n\n'
+          + 'The game requires you to follow the example images, and gradually draw the whole pattern with p5.Polar\n\n'
+          + 'Let’s start with drawing ellipse!\n\n'
+          + '=================\n\n'
+          + 'LEVEL 1-1 - Ellipse\n\n'
+          + '[Hint] polarEllipse() is the function to draw ellipse. There are three parameters that can be passed to the funciton: angle, radius, and distance (distance is an optional parameter)\n\n'
+          + '[Mission] Draw an ellipse by using ellipse function with a radius of 50\n\n'
+          + '=================\n'
+          + '*/\n\n'
+          + 'function draw() {\n'
+          + '  const ellipseRadius = 50;\n'
+          + '  // type your code here\n'
+          + '}',
+        mode: 'javascript',
+        lineWrapping: true,
+        viewportMargin: Infinity,
+        lineNumbers: true,
+        autofocus: true,
+        theme: 'tomorrow-night-bright'
+      });
+
+      editor.setOption('extraKeys', {
+        'Shift-Enter': (cm) => {
+          try {
+            let userInput = cm.getValue();
+            userInput = userInput.split(/\n/).map(line => 
+              line.includes('polar') ? 's.' + line.trim().replace(/\s/g, '').replace(';', '') : ''
+            ).filter(el => 
+              el != ''
+            );
+            userInput.shift();
+
+            if(userInput.length === 0) {
+              document.getElementById('msg').innerText = 'Try again!';
+            }
+            else if(example1.drawingContext.lineWidth === 0.5) {
+              lv1_1(userInput, cm);
+            }
+            else if(example2.drawingContext.lineWidth === 0.5) {
+              lv1_2(userInput, cm);
+            }
+            else if(example3.drawingContext.lineWidth === 0.5) {
+              lv1_3(userInput, cm);
+            }
+            else if(example4.drawingContext.lineWidth === 0.5) {
+              lv1_4(userInput, cm);
+            }
+            else if(example5.drawingContext.lineWidth === 0.5) {
+              lv1_5(userInput, cm);
+            }
+            else if(example6.drawingContext.lineWidth === 0.5) {
+              lv1_6(userInput, cm);
+            }
+          }
+          catch (error) {
+            document.getElementById('msg').innerText = error;
+          }
+        }
+      });
+    }
+  </script>
+</html>
+
+<!-- <html>
+  <head>
+    <script src='../codemirror/lib/codemirror.js'></script>
+    <link href='./lv1_ellipse.css' rel='stylesheet'>
+    <link href='../codemirror/lib/codemirror.css' rel='stylesheet'>
+    <script src="../codemirror/mode/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="../polar.js"></script>
+    <script src="./lv1_ellipse.js"></script>
+    <script src="https://bundle.run/pixelmatch"></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='codemirror'></div>
+      <div id='console'>
+        <span>Console</span>
+        <hr>
+        <div id="msg"></div>
+      </div>
+      <div id='userDrawing'>
+        <div id='draw1' class='col1-row1'></div>
+        <div id='draw2' class='col2-row1'></div>
+        <div id='draw3' class='col1-row2'></div>
+        <div id='draw4' class='col2-row2'></div>
+      </div>
+      <div id='polarExample'>
+        <div id='sketch1' class='col1-row1'></div>
+        <div id='sketch2' class='col2-row1'></div>
+        <div id='sketch3' class='col1-row2'></div>
+        <div id='sketch4' class='col2-row2'></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.onload = function() {
+      const editor = CodeMirror(document.querySelector('#codemirror'), { 
+        value: '/* Welcome to p5.Polar */\n\n'
+          + 'function draw() {\n'
+          + '  const ellipseRadius = 60;\n'
+          + '  // type your code here\n'
+          + '}',
+        mode: 'javascript',
+        lineNumbers: true,
+        autofocus: true,
+        theme: 'tomorrow-night-bright'
+      });
+
+      editor.setOption('extraKeys', {
+        'Shift-Enter': function(cm) {
+          try {
+            if(document.getElementById('defaultCanvas4')) {
+              let canvas = document.getElementById('draw1').getElementsByTagName('canvas');
+              while(canvas.length > 0) {
+                for(let i=0; i <canvas.length; i++) {
+                  canvas[i].remove();
+                }
+              }
+              document.getElementById('msg').innerText = '';
+            } 
+
+            let userInput = cm.getValue();
+            userInput = userInput.split(/\n/).map(
+              line => line.includes('polar') ? 's.' + line.trim() : ''
+            ).join('\n');
+
+            // let draw1 = function(s) { 
+            //   s.setup = function() {
+            //     let w = document.getElementById('sketch1').clientWidth;
+            //     let h = document.getElementById('sketch1').clientHeight;
+            //     s.createCanvas(w, h);
+            //     s.noFill();
+            //     s.stroke('#ccc');
+            //     s.strokeWeight(0.5); 
+            //     polar.setCenter(w/2, h/2);
+            //     // const ellipseRadius = 60;
+            //     // eval(userInput);
+            //     s.polarEllipse(0, 60, 0);
+            //   }; 
+            // };
+            // let userDrawing1 = new p5(draw1, 'draw1');
+            let graphics;
+            let draw1 = function(s) {
+              let w = document.getElementById('sketch1').clientWidth;
+              let h = document.getElementById('sketch1').clientHeight;
+              s.setup = function() {
+                graphics = s.createGraphics(w, h);
+                graphics.noFill();
+                graphics.stroke('#ccc');
+                graphics.strokeWeight(0.5); 
+                polar.setCenter(w/2, h/2);
+                graphics.polarEllipse(0, 60, 0);
+              };
+            };
+            graphics = new p5(draw1, 'draw1');
+
+            let exp1 = document.getElementById('defaultCanvas0');
+            let drw1 = document.getElementById('defaultCanvas4').nextSibling;
+            let exp1Context = exp1.getContext('2d');
+            let drw1Context = drw1.getContext('2d');
+            let isSame = true;
+            setTimeout(function compare(expData, drwData) {
+              // debugger
+              expData = exp1Context.getImageData(0, 0, exp1.width, exp1.height).data;
+              drwData = drw1Context.getImageData(0, 0, drw1.width, drw1.height).data;
+              for (let i=0; i<expData.length; i++) {
+                if (expData[i] !== drwData[i]) {
+                  isSame = false;
+                  break;
+                }
+              }
+              document.getElementById('msg').innerText = isSame ? 'Same' : 'Different';
+              
+              // if(isSame === true) {
+              //   userDrawing1.drawingContext.strokeStyle = '#F26522';
+              //   userDrawing1.drawingContext.lineWidth = '2';
+              // }
+            }, 5000);
+          }
+          catch (error) {
+            document.getElementById('msg').innerText = error;
+          }
+        }
+      });
+    }
+  </script>
+</html>
+ -->

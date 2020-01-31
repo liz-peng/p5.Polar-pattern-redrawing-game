@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background: #112D4F;
+  font-family: "Courier New", Courier, monospace;
+}
+
+hr {
+  border: 0.5px solid #9fabba; 
+}
+
+#container {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 80% 20%;
+  grid-template-columns: 40%;
+  grid-template-areas: "codemirror polar" 
+                       "console polar";
+}
+
+#codemirror {
+  grid-area: codemirror;
+  overflow: auto;
+  border-right: 1px solid #9fabba;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+#console {
+  grid-area: console;
+  overflow: auto;
+  color: #9fabba;
+  border-right: 0.5px solid #9fabba;
+  border-top: 0.5px solid #9fabba;
+  padding-top: 8px;
+}
+
+#console span {
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+#msg {
+  color: #9fabba;
+  padding-left: 8px;
+}
+
+#userDrawing {
+  grid-area: polar;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  z-index: 2;
+}
+
+/*#userDrawing span  {
+  color: #9fabba;
+  font-size: 14px;
+  padding-left: 15px;
+  display: block !important;
+  z-index: 2;
+}*/
+
+#polarExample {
+  grid-area: polar;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  z-index: 1;
+}
+
+.col1-row1, .col2-row1 {
+  border-right: 0.2px solid #9fabba;
+  border-bottom: 0.2px solid #9fabba;
+}
+
+.col3-row1 {
+  border-bottom: 0.2px solid #9fabba;
+}
+
+.col1-row2, .col2-row2 {
+  border-right: 0.2px solid #9fabba;
+}
+
+/* Override codemirror.css */
+.CodeMirror {
+  height: auto !important;
+  font-family: "Courier New", Courier, monospace !important;
+  background-color: #112D4F !important;
+}
+
+.CodeMirror-gutters {
+  border-right: 0px !important;
+  background-color: #112D4F !important;
+}
+
+.CodeMirror-linenumber {
+  padding: 0 15px 0 5px !important;
+  color: #ccc !important;
+}
+
+.cm-s-tomorrow-night-bright span.cm-comment { 
+  color: #848484 !important;
+}

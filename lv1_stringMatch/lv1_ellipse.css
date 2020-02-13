@@ -133,3 +133,7 @@ func {
 .cm-s-tomorrow-night-bright span.cm-comment { 
   color: #9c9c9c !important;
 }
+
+.cm-s-tomorrow-night-bright span.cm-number { 
+  color: #b387a9 !important;
+}

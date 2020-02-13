@@ -42,8 +42,7 @@ func {
 #nav {
   grid-area: nav;
   color: #ccc;
-  border-right: 0.5px solid #9fabba;
-  border-bottom: 0.5px solid #9fabba;
+  border-bottom: 1px solid #9fabba;
   padding-top: 5px;
   padding-left: 15px; 
 }
@@ -51,7 +50,6 @@ func {
 #intro {
   grid-area: intro;
   color: #ccc;
-  border-right: 1px solid #9fabba;
   padding: 0px 15px;
   overflow: scroll;
 }
@@ -59,7 +57,6 @@ func {
 #codemirror {
   grid-area: codemirror;
   overflow: auto;
-  border-right: 1px solid #9fabba;
   border-top: 4px solid #9fabba;
   border-bottom: 4px solid #9fabba;
   padding-top: 15px;
@@ -70,7 +67,6 @@ func {
   grid-area: console;
   overflow: auto;
   color: #9fabba;
-  border-right: 0.5px solid #9fabba;
   padding-top: 8px;
 }
 
@@ -100,17 +96,28 @@ func {
   z-index: 1;
 }
 
-.col1-row1, .col2-row1 {
-  border-right: 0.2px solid #9fabba;
-  border-bottom: 0.2px solid #9fabba;
+.col1-row1 {
+  border-left: 1px solid #9fabba;
+  border-right: 1px solid #9fabba;
+  border-bottom: 1px solid #9fabba;
+}
+
+.col1-row2 {
+  border-left: 1px solid #9fabba;
+  border-right: 1px solid #9fabba;
+}
+
+.col2-row1 {
+  border-right: 1px solid #9fabba;
+  border-bottom: 1px solid #9fabba;
+}
+
+.col2-row2 {
+  border-right: 1px solid #9fabba;
 }
 
 .col3-row1 {
-  border-bottom: 0.2px solid #9fabba;
-}
-
-.col1-row2, .col2-row2 {
-  border-right: 0.2px solid #9fabba;
+  border-bottom: 1px solid #9fabba;
 }
 
 /* Override codemirror.css */

@@ -1,6 +1,7 @@
 <html>
   <head>
     <script src='../codemirror/lib/codemirror.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='./lv1_ellipse.css' rel='stylesheet'>
     <link href='../codemirror/lib/codemirror.css' rel='stylesheet'>
     <script src="../codemirror/mode/javascript/javascript.js"></script>
@@ -11,49 +12,47 @@
   </head>
   <body>
     <div id='container'>
-      <div id='codemirror'></div>
-      <div id='console'>
-        <span>Console</span>
-        <hr>
-        <div id="msg"></div>
-      </div>
-      <div id='userDrawing'>
-        <div id='draw1' class='col1-row1'></div>
-        <div id='draw2' class='col2-row1'></div>
-        <div id='draw3' class='col3-row1'></div>
-        <div id='draw4' class='col1-row2'></div>
-        <div id='draw5' class='col2-row2'></div>
-        <div id='draw6' class='col3-row2'></div>
-      </div>
-      <div id='polarExample'>
-        <div id='sketch1' class='col1-row1'></div>
-        <div id='sketch2' class='col2-row1'></div>
-        <div id='sketch3' class='col3-row1'></div>
-        <div id='sketch4' class='col1-row2'></div>
-        <div id='sketch5' class='col2-row2'></div>
-        <div id='sketch6' class='col3-row2'></div>
+      <div id='codeArea'>
+        <div id='nav'>
+          <a href='https://github.com/liz-peng/p5.Polar' target='_blank'><i class='fa fa-github' style='font-size: 25px'></i></a>
+        </div>
+        <div id='intro'>
+            <h3>Welcome to p5.Polar (*´▽`*)</h3>
+            <p>This is a game for learning how to draw patterns with p5.Polar library. The right hand side is example image that shows how you can draw a pattern from a single shape. The game requires you to follow the example images, type your code in the box below, and gradually draw the whole pattern with p5.Polar</p>
+            <h4>1-1 Ellipse</h4>
+            <p><hint><b>Hint</b></hint> <func><b>polarEllipse()</b></func> is the function to draw ellipse. There are three parameters that can be passed to the funciton: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>
+            <p><hint><b>Mission</b></hint> Draw an ellipse by using polarEllipse function with a <b>radius of 50</b></p>
+        </div>
+        <div id='codemirror'></div>
+        <div id='console'>
+          <span>Console</span>
+          <hr>
+          <div id="msg"></div>
+        </div>
+        <div id='userDrawing'>
+          <div id='draw1' class='col1-row1'></div>
+          <div id='draw2' class='col2-row1'></div>
+          <div id='draw3' class='col3-row1'></div>
+          <div id='draw4' class='col1-row2'></div>
+          <div id='draw5' class='col2-row2'></div>
+          <div id='draw6' class='col3-row2'></div>
+        </div>
+        <div id='polarExample'>
+          <div id='sketch1' class='col1-row1'></div>
+          <div id='sketch2' class='col2-row1'></div>
+          <div id='sketch3' class='col3-row1'></div>
+          <div id='sketch4' class='col1-row2'></div>
+          <div id='sketch5' class='col2-row2'></div>
+          <div id='sketch6' class='col3-row2'></div>
+        </div>
       </div>
     </div>
   </body>
   <script>
     window.onload = () => {
       const editor = CodeMirror(document.querySelector('#codemirror'), { 
-        value: '/*\n'
-          + 'Welcome to p5.Polar (*´▽`*)\n\n'
-          + 'This is a playground for learning how to draw patterns with p5.Polar library.\n\n'
-          + 'You’re watching the coding area, the right hand side are example images that shows how you can draw a pattern from a single shape.\n\n'
-          + 'The game requires you to follow the example images, and gradually draw the whole pattern with p5.Polar\n\n'
-          + 'Let’s start with drawing ellipse!\n\n'
-          + '=================\n\n'
-          + 'LEVEL 1-1 - Ellipse\n\n'
-          + '[Hint] polarEllipse() is the function to draw ellipse. There are three parameters that can be passed to the funciton: angle, radius, and distance (distance is an optional parameter)\n\n'
-          + '[Mission] Draw an ellipse by using ellipse function with a radius of 50\n\n'
-          + '=================\n'
-          + '*/\n\n'
-          + 'function draw() {\n'
-          + '  const ellipseRadius = 50;\n'
-          + '  // type your code here\n'
-          + '}',
+        value: 'const ellipseRadius = 50;\n'
+          + '// type your code here',
         mode: 'javascript',
         lineWrapping: true,
         viewportMargin: Infinity,

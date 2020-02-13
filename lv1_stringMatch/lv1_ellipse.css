@@ -8,19 +8,60 @@ hr {
   border: 0.5px solid #9fabba; 
 }
 
-#container {
+h4 {
+  color: #e78c45;
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+hint {
+  background: #ccc;
+  color: #4c4c4c;
+  padding: 0 0.5em;
+}
+
+func {
+  color: #d54e53;
+}
+
+#codeArea {
+  grid-area: codeArea;
   display: grid;
   height: 100%;
-  grid-template-rows: 80% 20%;
+  grid-template-rows: 5% 55% 25% 15%;
   grid-template-columns: 40%;
-  grid-template-areas: "codemirror polar" 
+  grid-template-areas: "nav polar"
+                       "intro polar"
+                       "codemirror polar" 
                        "console polar";
+}
+
+#nav {
+  grid-area: nav;
+  color: #ccc;
+  border-right: 0.5px solid #9fabba;
+  border-bottom: 0.5px solid #9fabba;
+  padding-top: 5px;
+  padding-left: 15px; 
+}
+
+#intro {
+  grid-area: intro;
+  color: #ccc;
+  border-right: 1px solid #9fabba;
+  padding: 0px 15px;
+  overflow: scroll;
 }
 
 #codemirror {
   grid-area: codemirror;
   overflow: auto;
   border-right: 1px solid #9fabba;
+  border-top: 4px solid #9fabba;
+  border-bottom: 4px solid #9fabba;
   padding-top: 15px;
   padding-right: 15px;
 }
@@ -30,7 +71,6 @@ hr {
   overflow: auto;
   color: #9fabba;
   border-right: 0.5px solid #9fabba;
-  border-top: 0.5px solid #9fabba;
   padding-top: 8px;
 }
 
@@ -51,14 +91,6 @@ hr {
   grid-template-rows: 1fr 1fr;
   z-index: 2;
 }
-
-/*#userDrawing span  {
-  color: #9fabba;
-  font-size: 14px;
-  padding-left: 15px;
-  display: block !important;
-  z-index: 2;
-}*/
 
 #polarExample {
   grid-area: polar;

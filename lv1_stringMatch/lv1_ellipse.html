@@ -15,6 +15,7 @@
     <div id='container'>
       <div id='codeArea'>
         <div id='nav'>
+          <logo>p5.Polar</logo>
           <a href='https://github.com/liz-peng/p5.Polar' target='_blank'><i class='fa fa-github' style='font-size: 25px'></i></a>
         </div>
         <div id='intro'>
@@ -22,7 +23,8 @@
             <p>This is a game for learning how to draw patterns with p5.Polar library. The right hand side is example image that shows how you can draw a pattern from a single shape. The game requires you to follow the example images, type your code in the box below, and gradually draw the whole pattern with p5.Polar</p>
             <h4>1-1 Ellipse</h4>
             <p><hint><b>Hint</b></hint> <func><b>polarEllipse()</b></func> is the function to draw ellipse. There are three parameters that can be passed to the funciton: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>
-            <p><hint><b>Mission</b></hint> Draw an ellipse by using polarEllipse function with a <b>radius of 50</b></p>
+            <p><hint><b>Mission</b></hint> Draw an ellipse by using polarEllipse function with a <b>radius of 50</b></p> 
+            <p>* Type your answer in the box below and execute the code with <key>Shift + Enter</key> keys</p>
         </div>
         <div id='codemirror'></div>
         <div id='console'>
@@ -52,8 +54,7 @@
   <script>
     window.onload = () => {
       const editor = CodeMirror(document.querySelector('#codemirror'), { 
-        value: 'const ellipseRadius = 50;\n'
-          + '// type your code here',
+        value: '// type your code here\n',
         mode: 'javascript',
         lineWrapping: true,
         viewportMargin: Infinity,
@@ -61,6 +62,8 @@
         autofocus: true,
         theme: 'tomorrow-night-bright'
       });
+      editor.focus();
+      editor.setCursor({line: 1});
 
       editor.setOption('extraKeys', {
         'Shift-Enter': (cm) => {

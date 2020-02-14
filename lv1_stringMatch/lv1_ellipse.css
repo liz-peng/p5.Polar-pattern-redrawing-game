@@ -27,6 +27,10 @@ func {
   color: #d54e53;
 }
 
+key {
+  color: #b9ca4a;
+}
+
 #codeArea {
   grid-area: codeArea;
   display: grid;

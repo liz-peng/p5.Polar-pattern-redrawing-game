@@ -5,8 +5,6 @@ const lv1_1Pattern = [
 
 const lv1_1 = (userInput, cm) => {
 	userInput = userInput.map(substr =>
-		substr.replace('ellipseRadius', '50')
-	).map(substr =>
 		substr.replace('(0,50)', '(0,50,0)')
 	);
 	
@@ -18,7 +16,7 @@ const lv1_1 = (userInput, cm) => {
   const lv1_1Ans = userInput.every(el => 
     lv1_1Pattern.includes(el)
   );
-
+	
 	let draw1 = (s) => { 
     s.setup = () => {
       let w = document.getElementById('draw1').clientWidth;
@@ -29,7 +27,6 @@ const lv1_1 = (userInput, cm) => {
       if(!lv1_1Ans) {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
-      	const ellipseRadius = 50;
 	      eval(userInput.join());
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
@@ -40,20 +37,14 @@ const lv1_1 = (userInput, cm) => {
 	      example1.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv1_2Val = '/*\n'
-	          + '=================\n\n'
-	          + 'LEVEL 1-2 - Ellipse\n\n'
-	          + '[Hint] polarEllipse(angle, radius, distance)\n\n'
-	          + '[Mission] Draw an ellipse by using ellipse function starting at angle 30, with a radius of 50\n\n'
-	          + '=================\n'
-	          + '*/\n\n'
-	          + 'function draw() {\n'
-	          + '  const ellipseAngle = 30;\n'
-	          + '  const ellipseRadius = 50;\n'
-	          + '  // type your code here\n'
-	          + '}';
-		      cm.setValue(lv1_2Val);
+		      let lv1_2Val = '<h4>1-2 Ellipse</h4>'
+	          + '<p><hint><b>Mission</b></hint> Draw an ellipse by calling polarEllipse function starting at <b>angle 30</b>, with a <b>radius of 50</b></p>'
+	          + '<p><hint><b>Hint</b></hint> <func><b>polarEllipse()</b></func> is the function to draw ellipse. There are three parameters that can be passed to the funciton: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>'
+	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
+		      document.getElementById('intro').innerHTML = lv1_2Val;
 		      document.getElementById('msg').innerText = '';
+		      cm.setValue('// type your code here\n');
+		      cm.setCursor({line: 1});
 		    }, 1000);
 	    }
     }; 
@@ -68,10 +59,6 @@ const lv1_2Pattern = [
 
 const lv1_2 = (userInput, cm) => {
 	userInput = userInput.map(substr =>
-		substr.replace('ellipseRadius', '50')
-	).map(substr =>
-		substr.replace('ellipseAngle', '30')
-	).map(substr =>
 		substr.replace('(30,50)', '(30,50,0)')
 	);
 	
@@ -93,8 +80,6 @@ const lv1_2 = (userInput, cm) => {
       if(!lv1_2Ans) {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
-      	const ellipseAngle = 30;
-  			const ellipseRadius = 50;
 	      eval(userInput.join());
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
@@ -105,22 +90,15 @@ const lv1_2 = (userInput, cm) => {
 	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv1_3Val = '/*\n'
-		      	+ 'You just set up angle in the last level, why it was not working? Well, in p5.Polar, every shape rotate from the center point, the shape you drew is ellipse so it looks the same. Do not worry, we will figure it out soon with other types of shapes.\n\n'
-	          + '=================\n\n'
-	          + 'LEVEL 1-3 - Ellipse\n\n'
-	          + '[Hint] polarEllipse(angle, radius, distance)\n\n'
-	          + '[Mission] Draw two ellipse by calling ellipse function two times, starting at angle 0, radius 50 for both of ellipses and with a distance of 50 and -50\n\n'
-	          + '=================\n'
-	          + '*/\n\n'
-	          + 'function draw() {\n'
-	          + '  const ellipseRadius = 50;\n'
-	          + '  const ellipseDistanceA = 50;\n'
-	          + '  const ellipseDistanceB = -50;\n'
-	          + '  // type your code here\n'
-	          + '}';
-		      cm.setValue(lv1_3Val);
+		      let lv1_3Val = '<h4>1-3 Ellipse</h4>'
+		      	+ '<p>In the previous level, you set an ellipse with angle of 30 degree but nothing changed, why? In p5.Polar, every shapes rotate at the center point and what we draw is an ellipse so it looks like not rotating. Don\'t worry, we will figure this out soon with other types of shape.</p>'
+	          + '<p><hint><b>Mission</b></hint> Draw <b>2</b> ellipses by calling polarEllipse function starting at <b>angle 0</b>, with a <b>radius 50</b> for both ellipses, and set one ellipse with <b>distance of 50</b> and the other one with <b>distance of -50</b></p>'
+	          + '<p><hint><b>Hint</b></hint> <func><b>polarEllipse()</b></func> is the function to draw ellipse. There are three parameters that can be passed to the funciton: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>'
+	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
+		      document.getElementById('intro').innerHTML = lv1_3Val;
 		      document.getElementById('msg').innerText = '';
+		      cm.setValue('// type your code here\n');
+		      cm.setCursor({line: 1});
 		    }, 1000);
 	    }
     }; 
@@ -135,14 +113,6 @@ const lv1_3Pattern = [
 ];
 
 const lv1_3 = (userInput, cm) => {
-	userInput = userInput.map(substr =>
-		substr.replace('ellipseRadius', '50')
-	).map(substr =>
-		substr.replace('ellipseDistanceA', '50')
-	).map(substr =>
-		substr.replace('ellipseDistanceB', '-50')
-	);
-	
 	if(document.getElementById('defaultCanvas8')) {
     document.getElementById('defaultCanvas8').remove();
     document.getElementById('msg').innerText = '';
@@ -151,6 +121,7 @@ const lv1_3 = (userInput, cm) => {
   const lv1_3Match = userInput.every(el => 
     lv1_3Pattern.includes(el)
   );
+
   const lv1_3Ans = lv1_3Pattern.every(el => 
     lv1_3Match && userInput.includes(el)
   );
@@ -165,9 +136,6 @@ const lv1_3 = (userInput, cm) => {
       if(!lv1_3Ans) {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
-      	const ellipseRadius = 50;
-  			const ellipseDistanceA = 50;
-  			const ellipseDistanceB = -50;
 	      eval(userInput.join());
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
@@ -179,22 +147,15 @@ const lv1_3 = (userInput, cm) => {
 	      example3.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv1_4Val = '/*\n'
-		      	+ 'If you want to draw a pattern that requires 20 ellipses show on the screen, imagine you have to call 20 ellipse function!!! Do not worry, we have multiple shapes drawing function.\n\n'
-	          + '=================\n\n'
-	          + 'LEVEL 1-4 - Ellipses\n\n'
-	          + '[Hint] polarEllipses() is the function to draw multiple ellipses. There are three parameters that can be passed to the funciton: number, radius, and distance (distance is an optional parameter)\n\n'
-	          + '[Mission] Draw two ellipse by calling ellipses function, starting at number 2, radius 50 with a distance of 50\n\n'
-	          + '=================\n'
-	          + '*/\n\n'
-	          + 'function draw() {\n'
-	          + '  const ellipseNum = 2;\n'
-	          + '  const ellipseRadius = 50;\n'
-	          + '  const ellipseDistance = 50;\n'
-	          + '  // type your code here\n'
-	          + '}';
-		      cm.setValue(lv1_4Val);
+		      let lv1_4Val = '<h4>1-4 Ellipses</h4>'
+		      	+ '<p>If a pattern requires you to draw 20 ellipses and imagine you have to call 20 polarEllipse function... Don\'t worry, let us introduce the multiple drawing functions that can draw multiple shapes at one time.</p>'
+	          + '<p><hint><b>Mission</b></hint> Draw <b>2</b> ellipses by calling polarEllipses function starting at <b>number 2</b>, with <b>radius 50</b> and <b>distance of 50</b></p>'
+	          + '<p><hint><b>Hint</b></hint> <func><b>polarEllipses()</b></func> is the function to draw multiple ellipses. There are three parameters that can be passed to the funciton: <b>number</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>'
+	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
+		      document.getElementById('intro').innerHTML = lv1_4Val;
 		      document.getElementById('msg').innerText = '';
+		      cm.setValue('// type your code here\n');
+		      cm.setCursor({line: 1});
 		    }, 1000);
 	    }
     }; 
@@ -208,14 +169,6 @@ const lv1_4Pattern = [
 ];
 
 const lv1_4 = (userInput, cm) => {
-	userInput = userInput.map(substr =>
-		substr.replace('ellipseNum', '2')
-	).map(substr =>
-		substr.replace('ellipseRadius', '50')
-	).map(substr =>
-		substr.replace('ellipseDistance', '50')
-	);
-	
 	if(document.getElementById('defaultCanvas9')) {
     document.getElementById('defaultCanvas9').remove();
     document.getElementById('msg').innerText = '';
@@ -235,9 +188,6 @@ const lv1_4 = (userInput, cm) => {
       if(!lv1_4Ans) {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
-      	const ellipseNum = 2;
-	      const ellipseRadius = 50;
-	      const ellipseDistance = 50;
 	      eval(userInput.join());
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
@@ -248,22 +198,15 @@ const lv1_4 = (userInput, cm) => {
 	      example4.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv1_5Val = '/*\n'
-		      	+ 'With the multiple ellipses function, we draw the same pattern just use one line. What about a ring of circle?\n\n'
-	          + '=================\n\n'
-	          + 'LEVEL 1-5 - Ellipses\n\n'
-	          + '[Hint] polarEllipses(number, radius, distance)\n\n'
-	          + '[Mission] Draw 10 ellipses by using ellipses function, starting at number 6, radius 50 with a distance of 50\n\n'
-	          + '=================\n'
-	          + '*/\n\n'
-	          + 'function draw() {\n'
-	          + '  const ellipseNum = 10;\n'
-	          + '  const ellipseRadius = 50;\n'
-	          + '  const ellipseDistance = 50;\n'
-	          + '  // type your code here\n'
-	          + '}';
-		      cm.setValue(lv1_5Val);
+		      let lv1_5Val = '<h4>1-5 Ellipses</h4>'
+		      	+ '<p>With the multiple drawing function, we can draw the same pattern by using one line only. Let\'s draw a ring of ellipses to see how magical it is.</p>'
+	          + '<p><hint><b>Mission</b></hint> Draw <b>10</b> ellipses by calling polarEllipses function starting at <b>number 10</b>, with <b>radius 50</b> with a <b>distance of 50</b> as well</p>'
+	          + '<p><hint><b>Hint</b></hint> <func><b>polarEllipses()</b></func> is the function to draw multiple ellipses. There are three parameters that can be passed to the funciton: <b>number</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>'
+	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
+		      document.getElementById('intro').innerHTML = lv1_5Val;
 		      document.getElementById('msg').innerText = '';
+		      cm.setValue('// type your code here\n');
+		      cm.setCursor({line: 1});
 		    }, 1000);
 	    }
     }; 
@@ -277,14 +220,6 @@ const lv1_5Pattern = [
 ];
 
 const lv1_5 = (userInput, cm) => {
-	userInput = userInput.map(substr =>
-		substr.replace('ellipseNum', '10')
-	).map(substr =>
-		substr.replace('ellipseRadius', '50')
-	).map(substr =>
-		substr.replace('ellipseDistance', '50')
-	);
-	
 	if(document.getElementById('defaultCanvas10')) {
     document.getElementById('defaultCanvas10').remove();
     document.getElementById('msg').innerText = '';
@@ -304,9 +239,6 @@ const lv1_5 = (userInput, cm) => {
       if(!lv1_5Ans) {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
-      	const ellipseNum = 10;
-	      const ellipseRadius = 50;
-	      const ellipseDistance = 50;
 	      eval(userInput.join());
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
@@ -317,22 +249,14 @@ const lv1_5 = (userInput, cm) => {
 	      example5.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv1_6Val = '/*\n'
-		      	+ '=================\n\n'
-	          + 'LEVEL 1-6 - Ellipses\n\n'
-	          + '[Hint] polarEllipses(number, radius, distance)\n\n'
-	          + '[Mission] Draw a set of ellipses, starting at number 20, radius 25 with a distance of 50, and another set of ellipses, starting at number 20, radius 50 with a distance of 50\n\n'
-	          + '=================\n'
-	          + '*/\n\n'
-	          + 'function draw() {\n'
-	          + '  const ellipseNum = 20;\n'
-	          + '  const ellipseRadiusA = 25;\n'
-	          + '  const ellipseRadiusB = 50;\n'
-	          + '  const ellipseDistance = 50;\n'
-	          + '  // type your code here\n'
-	          + '}';
-		      cm.setValue(lv1_6Val);
+		      let lv1_6Val = '<h4>1-6 Ellipses</h4>'
+	          + '<p><hint><b>Mission</b></hint> Draw a set of ellipses starting at <b>number 20</b>, <b>radius 25</b> with a <b>distance of 50</b>, and another set of ellipses starting at <b>number 20</b>, <b>radius 50</b> with a <b>distance of 50</b></p>'
+	          + '<p><hint><b>Hint</b></hint> <func><b>polarEllipses()</b></func> is the function to draw multiple ellipses. There are three parameters that can be passed to the funciton: <b>number</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>'
+	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
+		      document.getElementById('intro').innerHTML = lv1_6Val;
 		      document.getElementById('msg').innerText = '';
+		      cm.setValue('// type your code here\n');
+		      cm.setCursor({line: 1});
 		    }, 1000);
 	    }
     }; 
@@ -347,16 +271,6 @@ const lv1_6Pattern = [
 ];
 
 const lv1_6 = (userInput, cm) => {
-	userInput = userInput.map(substr =>
-		substr.replace('ellipseNum', '20')
-	).map(substr =>
-		substr.replace('ellipseRadiusA', '25')
-	).map(substr =>
-		substr.replace('ellipseRadiusB', '50')
-	).map(substr =>
-		substr.replace('ellipseDistance', '50')
-	);
-
 	if(document.getElementById('defaultCanvas11')) {
     document.getElementById('defaultCanvas11').remove();
     document.getElementById('msg').innerText = '';
@@ -379,10 +293,6 @@ const lv1_6 = (userInput, cm) => {
       if(!lv1_6Ans) {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
-      	const ellipseNum = 20;
-	      const ellipseRadiusA = 25;
-	      const ellipseRadiusB = 50;
-	      const ellipseDistance = 50;
 	      eval(userInput.join());
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
@@ -393,6 +303,13 @@ const lv1_6 = (userInput, cm) => {
     		s.polarEllipses(20, 50, 50);
 	      example6.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
+	      setTimeout(() => { 
+		      let nextVal = '<h3>Congratulations! (*´▽`*)</h3>'
+		      + '<p>You just learned how to draw ellipse. Click the button below and move to the next level!</p>'
+		      + '<button onclick="window.location.href = \'#\'">Next Level - Triangle</button>';
+	        document.getElementById('intro').innerHTML = nextVal;
+		      document.getElementById('msg').innerText = '';
+		    }, 1000);
 	    }
     }; 
   };

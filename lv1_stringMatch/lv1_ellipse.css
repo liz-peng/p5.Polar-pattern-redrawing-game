@@ -17,6 +17,24 @@ a {
   text-decoration: none;
 }
 
+button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #d54e53;
+  border: none;
+  padding: 0.5em 0.5em;
+  margin: 2em 2em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bf464a;
+}
+
 hint {
   background: #ccc;
   color: #4c4c4c;
@@ -28,7 +46,58 @@ func {
 }
 
 key {
-  color: #b9ca4a;
+  color: #a16a94;
+}
+
+.logo {
+  padding-left: 15px;
+}
+
+.git {
+  padding-right: 15px;
+}
+
+.level {
+  cursor: pointer;
+}
+
+.git:hover, .level:hover  {
+  color: #9c9c9c;
+}
+
+.nav-right {
+  margin-left: auto;
+  padding-right: 15px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #ccc;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: #000;
+  border-bottom: 0.5px solid #b7b7b7;
+  padding: 0.8em 0.8em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #b7b7b7
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 #codeArea {
@@ -45,10 +114,12 @@ key {
 
 #nav {
   grid-area: nav;
+  display: flex;
   color: #ccc;
   border-bottom: 1px solid #9fabba;
-  padding-top: 5px;
-  padding-left: 15px; 
+  background: #112d4f;
+  height: 100%;
+  align-items: center;
 }
 
 #intro {
@@ -56,6 +127,7 @@ key {
   color: #ccc;
   padding: 0px 15px;
   overflow: scroll;
+  position: relative;
 }
 
 #codemirror {

@@ -73,7 +73,7 @@ driver.defineSteps([
     element: '#console',
     popover: {
       title: 'Console',
-      description: 'Console shows you the error message when your code runs into problem',
+      description: 'Console shows you the error message when your code runs into problem. It also tells if you pass the level or not',
       position: 'top-center'
     }
   },

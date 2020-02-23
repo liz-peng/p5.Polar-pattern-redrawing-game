@@ -46,12 +46,23 @@ hr {
   padding-left: 8px;
 }
 
-#polar {
+#userDrawing {
+  /*mix-blend-mode: overlay;*/
   grid-area: polar;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   text-align: center;
+  z-index: 2;
+}
+
+#polarExample {
+  grid-area: polar;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+  z-index: 1;
 }
 
 .col1, .col2, .col3 {

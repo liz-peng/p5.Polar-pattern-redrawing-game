@@ -1,4 +1,4 @@
-body {
+/*/*/*body {
   margin: 0;
   background: #112D4F;
   font-family: "Courier New", Courier, monospace;
@@ -7,6 +7,31 @@ body {
 hr {
   border: 0.5px solid #9fabba; 
 }
+
+.navbar {
+  overflow: hidden;
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+/*
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}*/
+
 
 #container {
   display: grid;
@@ -47,35 +72,38 @@ hr {
 #userDrawing {
   grid-area: polar;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  text-align: center;
   z-index: 2;
 }
+
+/*#userDrawing span  {
+  color: #9fabba;
+  font-size: 14px;
+  padding-left: 15px;
+  display: block !important;
+  z-index: 2;
+}*/
 
 #polarExample {
   grid-area: polar;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  text-align: center;
   z-index: 1;
 }
 
-.col1-row1 {
+.col1-row1, .col2-row1 {
   border-right: 0.2px solid #9fabba;
   border-bottom: 0.2px solid #9fabba;
-  text-align: center;
 }
 
-.col2-row1 {
+.col3-row1 {
   border-bottom: 0.2px solid #9fabba;
-  text-align: center;
 }
 
-.col1-row2 {
+.col1-row2, .col2-row2 {
   border-right: 0.2px solid #9fabba;
-  text-align: center;
 }
 
 /* Override codemirror.css */
@@ -97,4 +125,4 @@ hr {
 
 .cm-s-tomorrow-night-bright span.cm-comment { 
   color: #848484 !important;
-}
+}*/*/*/

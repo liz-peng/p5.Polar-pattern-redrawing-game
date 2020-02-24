@@ -32,7 +32,7 @@ const lv1_1 = (userInput, cm) => {
 	    }
 	    else {
       	s.strokeWeight(1); 
-      	s.stroke('#ff6f69');
+      	s.stroke('#cef19d');
 	      s.polarLine(0, 100, 0);
 	      example1.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
@@ -98,9 +98,9 @@ const lv1_2 = (userInput, cm) => {
 	    }
 	    else {
       	s.strokeWeight(1); 
-      	s.stroke('#ff6f69');
+      	s.stroke('#cef19d');
 	      s.polarLine(0, 100, 0);
-	      s.stroke('#88d8b0');
+	      s.stroke('#398684');
     		s.polarLine(90, 100, 0);
 	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
@@ -168,9 +168,9 @@ const lv1_3 = (userInput, cm) => {
 	    }
 	    else {
       	s.strokeWeight(1); 
-	      s.stroke('#ff6f69');
+	      s.stroke('#cef19d');
 	      s.polarLine(0, 100, 0);
-	      s.stroke('#88d8b0');
+	      s.stroke('#398684');
     		s.polarLine(90, 100, 50);
 	      example3.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';

@@ -8,7 +8,7 @@ let sketch1 = function(p) {
     p.stroke('#ccc');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
-    p.polarLine(0, 100, 0);
+    p.polarLine(0, 150, 0);
   }; 
 };
 let example1 = new p5(sketch1, 'sketch1');
@@ -23,10 +23,10 @@ let sketch2 = function(p) {
     p.stroke('#ccc');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
-    p.polarLine(0, 100, 0);
-    p.polarLine(45, 100, 0);
-    p.polarLine(90, 100, 0);
-    p.polarLine(135, 100, 0);
+    p.polarLine(0, 150, 0);
+    p.polarLine(45, 150, 0);
+    p.polarLine(90, 150, 0);
+    p.polarLine(135, 150, 0);
   }; 
 };
 let example2 = new p5(sketch2, 'sketch2');
@@ -41,10 +41,10 @@ let sketch3 = function(p) {
     p.stroke('#ccc');
     p.strokeWeight(0.5); 
     polar.setCenter(w/2, h/2);
-    p.polarLine(0, 100, 0);
-    p.polarLine(45, 100, 0);
-    p.polarLine(90, 100, 0);
-    p.polarLine(135, 100, 0);
+    p.polarLine(0, 150, 0);
+    p.polarLine(45, 150, 0);
+    p.polarLine(90, 150, 0);
+    p.polarLine(135, 150, 0);
     p.polarTriangle(0, 100, 50);
   }; 
 };

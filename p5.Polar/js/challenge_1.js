@@ -1,6 +1,6 @@
 // ch1.1
 const lvch1_1Pattern = [
-	's.polarLine(0,100)'
+	's.polarLine(0,150)'
 ];
 
 const lvch1_1 = (userInput, cm) => {
@@ -33,13 +33,13 @@ const lvch1_1 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#daf8e3');
-	      s.polarLine(0, 100, 0);
+	      s.polarLine(0, 150, 0);
 	      example1.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lvch1_2Val = '<h4>Challenge-1.2 Line & Triangle</h4>'
 	          + '<p><hint><b>Mission</b></hint> ' 
-	          + 'Add three more lines with <b>radius of 100</b>. '
+	          + 'Add three more lines with <b>radius of 150</b>. '
 	          + 'The total four lines have four different angles <b>0, 45, 90 and 135</b>. '
 	          + 'Call polarLine() function three more times to achieve the goal. Remember, each of line function should have different angle</p> '
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
@@ -58,10 +58,10 @@ const lvch1_1 = (userInput, cm) => {
 
 // ch1.2
 const lvch1_2Pattern = [
-	's.polarLine(0,100)',
-  's.polarLine(45,100)',
-  's.polarLine(90,100)',
-  's.polarLine(135,100)'
+	's.polarLine(0,150)',
+  's.polarLine(45,150)',
+  's.polarLine(90,150)',
+  's.polarLine(135,150)'
 ];
 
 const lvch1_2 = (userInput, cm) => {
@@ -98,13 +98,13 @@ const lvch1_2 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#daf8e3');
-	      s.polarLine(0, 100, 0);
+	      s.polarLine(0, 150, 0);
 	      s.stroke('#97ebdb');
-		    s.polarLine(45, 100, 0);
+		    s.polarLine(45, 150, 0);
 		    s.stroke('#00c2c7');
-		    s.polarLine(90, 100, 0);
+		    s.polarLine(90, 150, 0);
 		    s.stroke('#0086ad');
-		    s.polarLine(135, 100, 0);
+		    s.polarLine(135, 150, 0);
 	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
@@ -128,10 +128,10 @@ const lvch1_2 = (userInput, cm) => {
 
 // ch1.3
 const lvch1_3Pattern = [
-	's.polarLine(0,100)',
-  's.polarLine(45,100)',
-  's.polarLine(90,100)',
-  's.polarLine(135,100)',
+	's.polarLine(0,150)',
+  's.polarLine(45,150)',
+  's.polarLine(90,150)',
+  's.polarLine(135,150)',
   's.polarTriangle(0,100,50)'
 ];
 
@@ -169,13 +169,13 @@ const lvch1_3 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
 	      s.stroke('#daf8e3');
-	      s.polarLine(0, 100, 0);
+	      s.polarLine(0, 150, 0);
 	      s.stroke('#97ebdb');
-		    s.polarLine(45, 100, 0);
+		    s.polarLine(45, 150, 0);
 		    s.stroke('#00c2c7');
-		    s.polarLine(90, 100, 0);
+		    s.polarLine(90, 150, 0);
 		    s.stroke('#0086ad');
-		    s.polarLine(135, 100, 0);
+		    s.polarLine(135, 150, 0);
 		    s.stroke('#f7cac9');
 		    s.polarTriangle(0, 100, 50);
 	      example3.drawingContext.lineWidth = 1;
@@ -202,10 +202,10 @@ const lvch1_3 = (userInput, cm) => {
 
 // ch1.4
 const lvch1_4Pattern = [
-	's.polarLine(0,100)',
-  's.polarLine(45,100)',
-  's.polarLine(90,100)',
-  's.polarLine(135,100)',
+	's.polarLine(0,150)',
+  's.polarLine(45,150)',
+  's.polarLine(90,150)',
+  's.polarLine(135,150)',
   's.polarTriangle(0,100,50)',
   's.polarTriangle(45,100,50)',
   's.polarTriangle(90,100,50)',

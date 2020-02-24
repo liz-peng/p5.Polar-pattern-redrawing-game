@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>p5.Polar Line</title>
+    <script src='../../../codemirror/lib/codemirror.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='../../css/line.css' rel='stylesheet'>
+    <link href='../../../codemirror/lib/codemirror.css' rel='stylesheet'>
+    <script src="../../../codemirror/mode/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="../../js/polar.js"></script>
+    <script src="../../js/line.js"></script>
+    <script src="../../js/line_example.js"></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='codeArea'>
+        <div id='nav'>
+          <a href='#' class='logo' onClick='window.location.reload()'>p5.Polar</a>
+          <div class='nav-right'>
+            <a href='https://github.com/liz-peng/p5.Polar' target='_blank' class='git'>GitHub</a>
+            <div class='dropdown'>
+              <div class='level'>Level</div>
+              <div class='dropdown-content'>
+                <a href='#'>Line</a>
+                <a href='../triangle/index.html'>Triangle</a>
+                <a href='../challenge/challenge_1.html'>Challenge &#8544;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='intro'>
+          <h4>Level-1.1 Line</h4>
+          <p><hint><b>Mission</b></hint> Draw a line with <b>radius of 100</b> by calling polarLine() function. See the function details below</p> 
+          <p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> is the function to draw a single line. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter). For example, polarLine(30, 50, 0) draws a line starts with 30 degree of angle and radius of 50</p>
+          <p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>
+        </div>
+        <div id='codemirror'></div>
+        <div id='console'>
+          <span>Console</span>
+          <hr>
+          <div id="msg"></div>
+        </div>
+        <div id='userDrawing'>
+          <div id='draw1' class='col1-row1'></div>
+          <div id='draw2' class='col2-row1'></div>
+          <div id='draw3' class='col1-row2'></div>
+          <div id='draw4' class='col2-row2'></div>
+        </div>
+        <div id='polarExample'>
+          <div id='sketch1' class='col1-row1'></div>
+          <div id='sketch2' class='col2-row1'></div>
+          <div id='sketch3' class='col1-row2'></div>
+          <div id='sketch4' class='col2-row2'></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const editor = CodeMirror(document.querySelector('#codemirror'), { 
+        value: '// type your code here\n',
+        mode: 'javascript',
+        lineWrapping: true,
+        viewportMargin: Infinity,
+        lineNumbers: true,
+        autofocus: true,
+        theme: 'tomorrow-night-bright'
+      });
+      editor.focus();
+      editor.setCursor({line: 1});
+
+      editor.setOption('extraKeys', {
+        'Shift-Enter': (cm) => {
+          try {
+            let userInput = cm.getValue();
+            userInput = userInput.split(/\n/).map(line => 
+              line.includes('polar') ? 's.' + line.trim().replace(/\s/g, '').replace(';', '') : ''
+            ).filter(el => 
+              el != ''
+            );
+
+            if(userInput.length === 0) {
+              document.getElementById('msg').innerText = 'Try again!';
+            }
+            else if(example1.drawingContext.lineWidth === 0.5) {
+              lv1_1(userInput, cm);
+            }
+            else if(example2.drawingContext.lineWidth === 0.5) {
+              lv1_2(userInput, cm);
+            }
+            else if(example3.drawingContext.lineWidth === 0.5) {
+              lv1_3(userInput, cm);
+            }
+            else if(example4.drawingContext.lineWidth === 0.5) {
+              lv1_4(userInput, cm);
+            }
+          }
+          catch (error) {
+            document.getElementById('msg').innerText = error;
+          }
+        }
+      });
+    }
+  </script>
+</html>

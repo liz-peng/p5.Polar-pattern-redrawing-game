@@ -31,8 +31,8 @@ const lv1_1 = (userInput, cm) => {
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
 	    else {
-	    	s.stroke('#F26522');
       	s.strokeWeight(1); 
+      	s.stroke('#ff6f69');
 	      s.polarLine(0, 100, 0);
 	      example1.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
@@ -97,9 +97,10 @@ const lv1_2 = (userInput, cm) => {
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
 	    else {
-	    	s.stroke('#F26522');
       	s.strokeWeight(1); 
+      	s.stroke('#ff6f69');
 	      s.polarLine(0, 100, 0);
+	      s.stroke('#88d8b0');
     		s.polarLine(90, 100, 0);
 	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
@@ -166,10 +167,11 @@ const lv1_3 = (userInput, cm) => {
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
 	    else {
-	    	s.stroke('#F26522');
       	s.strokeWeight(1); 
+	      s.stroke('#ff6f69');
 	      s.polarLine(0, 100, 0);
-  			s.polarLine(90, 100, 50);
+	      s.stroke('#88d8b0');
+    		s.polarLine(90, 100, 50);
 	      example3.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
@@ -237,13 +239,18 @@ const lv1_4 = (userInput, cm) => {
 	      document.getElementById('msg').innerText = 'Try again!';
 	    }
 	    else {
-	    	s.stroke('#F26522');
       	s.strokeWeight(1); 
+	      s.stroke('#cef19d');
 	      s.polarLine(0, 100, 0);
+	      s.stroke('#a6dba7');
 				s.polarLine(30, 100, 0);
+				s.stroke('#77bd98');
 				s.polarLine(60, 100, 0);
+				s.stroke('#f9c6b3');
 				s.polarLine(90, 100, 0);
+				s.stroke('#faaa8f');
 				s.polarLine(120, 100, 0);
+				s.stroke('#e29686');
 				s.polarLine(150, 100, 0);
 	      example4.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';

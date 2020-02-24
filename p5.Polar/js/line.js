@@ -100,7 +100,7 @@ const lv1_2 = (userInput, cm) => {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
 	      s.polarLine(0, 100, 0);
-	      s.stroke('#398684');
+	      s.stroke('#77bd98');
     		s.polarLine(90, 100, 0);
 	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
@@ -170,7 +170,7 @@ const lv1_3 = (userInput, cm) => {
       	s.strokeWeight(1); 
 	      s.stroke('#cef19d');
 	      s.polarLine(0, 100, 0);
-	      s.stroke('#398684');
+	      s.stroke('#77bd98');
     		s.polarLine(90, 100, 50);
 	      example3.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
@@ -179,7 +179,7 @@ const lv1_3 = (userInput, cm) => {
 		      	+ '<p><hint><b>Mission</b></hint> '
 		      	+ 'Draw six lines with <b>radius of 100</b> '
 		      	+ 'and with six different angles <b>0, 30, 60, 90, 120 and 150</b>. '
-		      	+ 'Call polarLine() function six times. Each of line function should have different angle</p> '
+		      	+ 'Call polarLine() function six times. Each of line function should have different angle</p>'
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '

@@ -110,7 +110,7 @@ const lv1_2 = (userInput, cm) => {
 		      	+ 'Draw the same set of lines like previous level, a vertical line starts with '
 		      	+ '<b>angle 0 and radius of 100</b>. '
 		      	+ 'And another horizontal line starts with <b>angle 90 and radius of 100</b>, '
-		      	+ 'then give the gorizontal line a <b>distance of 50</b>. '
+		      	+ 'then give the horizontal line a <b>distance of 50</b>. '
 		      	+ 'Don\'t forget to call polarLine() function twice</p> '
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '

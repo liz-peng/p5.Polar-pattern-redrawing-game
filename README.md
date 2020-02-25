@@ -2,16 +2,20 @@
 
 **The work still in progress**
 
-[Layout Demo](https://liz-peng.github.io/p5.Polar/)
-
-[Lv.1 Demo](https://liz-peng.github.io/p5.Polar/lv1_1.0/lv1_ellipse.html)
+[Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/)
 
 This is a web editor (live coding environment) that helps [p5.js](https://p5js.org/) users to learn how to draw geometric patterns easier with [p5.Polar](https://github.com/liz-peng/p5.Polar) library.
 
-![alt text](https://i.imgur.com/hF9WS0R.png "p5.Polar web editor") 
+User instruction:
+![alt text](https://i.imgur.com/q36c4zs.png "user instruction") 
 
-![alt text](https://i.imgur.com/tpGcKu0.png "level 1 demo") 
+Finished level demo:
+![alt text](https://i.imgur.com/On6Wwd3.png "finished level demo") 
 
-![alt text](https://i.imgur.com/UWCi7JS.png "level 1 demo") 
+Unfinished level demo:
+![alt text](https://i.imgur.com/GNQndtl.png "unfinished level demo") 
+
+Finished level demo:
+![alt text](https://i.imgur.com/HNSRLi1.png "finished level demo") 
 
 

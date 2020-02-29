@@ -423,7 +423,9 @@ driver.defineSteps([
       let example9 = new p5(sketch9, 'sketch9');
     },
     onNext: () => {
-      window.location.replace('./level/line.html');
+      setTimeout(() => {
+        window.location.replace('./level/line.html');
+      }, 1000);
     }
   }
 ]);

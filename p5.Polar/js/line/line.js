@@ -1,6 +1,6 @@
 // 1.1
 const lv1_1Pattern = [
-	's.polarLine(0,100)'
+	's.polarLine(0,150)'
 ];
 
 const lv1_1 = (userInput, cm) => {
@@ -33,14 +33,14 @@ const lv1_1 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
-	      s.polarLine(0, 100, 0);
+	      s.polarLine(0, 150, 0);
 	      example1.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_2Val = '<h4>Level-1.2 Line</h4>'
 	          + '<p><hint><b>Mission</b></hint> ' 
-	          + 'Draw a vertical line, starts with <b>angle 0 and radius of 100</b>. '
-	          +	'And draw another horizontal line starts with <b>angle 90 and radius of 100</b> '
+	          + 'Draw a vertical line, starts with <b>angle 0 and radius of 150</b>. '
+	          +	'And draw another horizontal line starts with <b>angle 90 and radius of 150</b> '
 	          + 'by calling polarLine() function twice</p> '
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '
@@ -52,7 +52,7 @@ const lv1_1 = (userInput, cm) => {
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});
-		    }, 1000);
+		    }, 1500);
 	    }
     }; 
   };
@@ -61,8 +61,8 @@ const lv1_1 = (userInput, cm) => {
 
 // 1.2
 const lv1_2Pattern = [
-	's.polarLine(0,100)',
-  's.polarLine(90,100)'
+	's.polarLine(0,150)',
+  's.polarLine(90,150)'
 ];
 
 const lv1_2 = (userInput, cm) => {
@@ -99,17 +99,17 @@ const lv1_2 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
-	      s.polarLine(0, 100, 0);
+	      s.polarLine(0, 150, 0);
 	      s.stroke('#77bd98');
-    		s.polarLine(90, 100, 0);
+    		s.polarLine(90, 150, 0);
 	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_3Val = '<h4>Level-1.3 Line</h4>'
 		      	+ '<p><hint><b>Mission</b></hint> '
 		      	+ 'Draw the same set of lines like previous level, a vertical line starts with '
-		      	+ '<b>angle 0 and radius of 100</b>. '
-		      	+ 'And another horizontal line starts with <b>angle 90 and radius of 100</b>, '
+		      	+ '<b>angle 0 and radius of 150</b>. '
+		      	+ 'And another horizontal line starts with <b>angle 90 and radius of 150</b>, '
 		      	+ 'then give the horizontal line a <b>distance of 50</b>. '
 		      	+ 'Don\'t forget to call polarLine() function twice</p> '
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
@@ -122,7 +122,7 @@ const lv1_2 = (userInput, cm) => {
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});
-		    }, 1000);
+		    }, 1500);
 	    }
     }; 
   };
@@ -131,8 +131,8 @@ const lv1_2 = (userInput, cm) => {
 
 // 1.3
 const lv1_3Pattern = [
-	's.polarLine(0,100)',
-  's.polarLine(90,100,50)'
+	's.polarLine(0,150)',
+  's.polarLine(90,150,50)'
 ];
 
 const lv1_3 = (userInput, cm) => {
@@ -169,15 +169,15 @@ const lv1_3 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
 	      s.stroke('#cef19d');
-	      s.polarLine(0, 100, 0);
+	      s.polarLine(0, 150, 0);
 	      s.stroke('#77bd98');
-    		s.polarLine(90, 100, 50);
+    		s.polarLine(90, 150, 50);
 	      example3.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let lv1_4Val = '<h4>Level-1.4 Line</h4>'
 		      	+ '<p><hint><b>Mission</b></hint> '
-		      	+ 'Draw six lines with <b>radius of 100</b> '
+		      	+ 'Draw six lines with <b>radius of 150</b> '
 		      	+ 'and with six different angles <b>0, 30, 60, 90, 120 and 150</b>. '
 		      	+ 'Call polarLine() function six times. Each of line function should have different angle</p>'
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
@@ -190,7 +190,7 @@ const lv1_3 = (userInput, cm) => {
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});
-		    }, 1000);
+		    }, 1500);
 	    }
     }; 
   };
@@ -199,12 +199,12 @@ const lv1_3 = (userInput, cm) => {
 
 // // 1.4
 const lv1_4Pattern = [
-	's.polarLine(0,100)',
- 	's.polarLine(30,100)',
-  's.polarLine(60,100)',
-  's.polarLine(90,100)',
-  's.polarLine(120,100)',
-  's.polarLine(150,100)'
+	's.polarLine(0,150)',
+ 	's.polarLine(30,150)',
+  's.polarLine(60,150)',
+  's.polarLine(90,150)',
+  's.polarLine(120,150)',
+  's.polarLine(150,150)'
 ];
 
 const lv1_4 = (userInput, cm) => {
@@ -241,17 +241,17 @@ const lv1_4 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
 	      s.stroke('#cef19d');
-	      s.polarLine(0, 100, 0);
+	      s.polarLine(0, 150, 0);
 	      s.stroke('#a6dba7');
-				s.polarLine(30, 100, 0);
+				s.polarLine(30, 150, 0);
 				s.stroke('#77bd98');
-				s.polarLine(60, 100, 0);
+				s.polarLine(60, 150, 0);
 				s.stroke('#f9c6b3');
-				s.polarLine(90, 100, 0);
+				s.polarLine(90, 150, 0);
 				s.stroke('#faaa8f');
-				s.polarLine(120, 100, 0);
+				s.polarLine(120, 150, 0);
 				s.stroke('#e29686');
-				s.polarLine(150, 100, 0);
+				s.polarLine(150, 150, 0);
 	      example4.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
@@ -260,7 +260,7 @@ const lv1_4 = (userInput, cm) => {
 		      + '<button onclick="window.location.href = \'../triangle/index.html\'">Next Level - Triangle</button>';
 	        document.getElementById('intro').innerHTML = nextLevel;
 		      document.getElementById('msg').innerText = '';
-		    }, 1000);
+		    }, 1500);
 	    }
     }; 
   };

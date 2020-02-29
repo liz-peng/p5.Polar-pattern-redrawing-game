@@ -102,6 +102,7 @@ key {
   background: #112d4f;
   height: 100%;
   align-items: center;
+  z-index: -1 !important;
 }
 
 #intro {

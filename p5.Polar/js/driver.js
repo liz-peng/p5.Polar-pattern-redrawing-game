@@ -9,24 +9,16 @@ driver.defineSteps([
     element: '#step1',
     popover: {
       title: 'p5.Polar Introduction',
-      description: 'Welcome to p5.Polar. This is a quick introduction for the application. Click "Next" or use the arrow keys on your keyboard to move to the next step',
+      description: 'Welcome to p5.Polar. This is a quick introduction for the application. "Use the arrow keys on your keyboard" or click "Next" to move to the next step',
       position: 'bottom-center'
     }
   },
   {
-    element: '.level',
+    element: '#nav',
     popover: {
-      title: 'Menu Button',
-      description: 'The level button guides you to different levels',
-      position: 'bottom'
-    }
-  },
-  {
-    element: '.git',
-    popover: {
-      title: 'Menu Button',
-      description: 'The button takes you to p5.Polar source code',
-      position: 'bottom'
+      title: 'Menu',
+      description: 'Navigate to different levels or check p5.Polar source code',
+      position: 'bottom-center'
     }
   },
   {
@@ -57,7 +49,7 @@ driver.defineSteps([
     element: '#step7',
     popover: {
       title: 'Run Your Code',
-      description: 'Run your code with Shift + Enter keys in the box below',
+      description: 'Run your code with "Shift + Enter" keys in the box below',
       position: 'top-center'
     }
   },
@@ -65,7 +57,7 @@ driver.defineSteps([
     element: '#codemirror',
     popover: {
       title: 'Type Your Code',
-      description: 'Type your code/answer at here. Remember, check your answer and run your code with Shift + Enter keys',
+      description: 'Type your code/answer here. Remember, check your answer and run your code with "Shift + Enter" keys',
       position: 'top-center'
     }
   },

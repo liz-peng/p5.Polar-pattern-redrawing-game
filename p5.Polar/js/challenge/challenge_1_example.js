@@ -1,4 +1,4 @@
-// 2.1
+// ch1.1
 let sketch1 = function(p) { 
   p.setup = function() {
   	let w = document.getElementById('sketch1').clientWidth;
@@ -13,7 +13,7 @@ let sketch1 = function(p) {
 };
 let example1 = new p5(sketch1, 'sketch1');
 
-// 2.2
+// ch1.2
 let sketch2 = function(p) { 
   p.setup = function() {
     let w = document.getElementById('sketch2').clientWidth;
@@ -31,7 +31,7 @@ let sketch2 = function(p) {
 };
 let example2 = new p5(sketch2, 'sketch2');
 
-// 2.3
+// ch1.3
 let sketch3 = function(p) { 
   p.setup = function() {
     let w = document.getElementById('sketch3').clientWidth;
@@ -50,7 +50,7 @@ let sketch3 = function(p) {
 };
 let example3 = new p5(sketch3, 'sketch3');
 
-// 2.4
+// ch1.4
 let sketch4 = function(p) { 
   p.setup = function() {
     let w = document.getElementById('sketch4').clientWidth;

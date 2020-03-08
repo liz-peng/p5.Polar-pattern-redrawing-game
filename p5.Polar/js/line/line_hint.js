@@ -10,8 +10,10 @@ let m1 = function(m) {
     // angle reference
     m.polarLine(0, 150, 0);
     // text starts from here
-    m.textSize(12);
+    m.textSize(11);
     m.fill(204, 204, 204, 150);
+    m.text('Lv 1.1', -w/3-50, -h/3-30);
+    m.text('Radius 150', -w/3-50, -h/3-15);
     m.text('0°', -3, -154);
   }; 
 };
@@ -29,8 +31,10 @@ let m2 = function(m) {
     // angle reference
     m.polarLine(0, 150, 0);
     // text starts from here
-    m.textSize(12);
+    m.textSize(11);
     m.fill(204, 204, 204, 150);
+    m.text('Lv 1.2', -w/3-50, -h/3-30);
+    m.text('Radius 150', -w/3-50, -h/3-15);
     m.text('0°', -3, -154);
     m.text('90°', 162, 8);
   }; 
@@ -48,8 +52,11 @@ let m3 = function(m) {
     // angle reference
     m.polarLine(0, 150, 0);
     // text starts from here
-    m.textSize(12);
+    m.textSize(11);
     m.fill(204, 204, 204, 150);
+    m.text('Lv 1.3', -w/3-50, -h/3-30);
+    m.text('Radius 150', -w/3-50, -h/3-15);
+    m.text('Right Offset 50', -w/3-50, -h/3);
     m.text('0°', -3, -154);
     m.text('90°', -128, 10);
   }; 
@@ -67,8 +74,10 @@ let m4 = function(m) {
     // angle reference
     m.polarLine(0, 150, 0);
     // text starts from here
-    m.textSize(12);
+    m.textSize(11);
     m.fill(204, 204, 204, 150);
+    m.text('Lv 1.4', -w/3-50, -h/3-30);
+    m.text('Radius 150', -w/3-50, -h/3-15);
     m.text('0°', -3, -154);
     m.text('30°', 76, -134);
     m.text('60°', 138, -74);

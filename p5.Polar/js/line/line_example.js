@@ -7,7 +7,7 @@ let sketch1 = function(p) {
     p.noFill();
     p.stroke('#ccc');
     p.strokeWeight(0.5); 
-    polar.setCenter(w/2, h/2);
+    polar.setCenter(w/2, h/2+5);
     p.polarLine(0, 150, 0);
   }; 
 };
@@ -22,7 +22,7 @@ let sketch2 = function(p) {
     p.noFill();
     p.stroke('#ccc');
     p.strokeWeight(0.5); 
-    polar.setCenter(w/2, h/2);
+    polar.setCenter(w/2, h/2+5);
     p.polarLine(0, 150, 0);
     p.polarLine(90, 150, 0);
   }; 
@@ -38,7 +38,7 @@ let sketch3 = function(p) {
     p.noFill();
     p.stroke('#ccc');
     p.strokeWeight(0.5); 
-    polar.setCenter(w/2, h/2);
+    polar.setCenter(w/2, h/2+5);
     p.polarLine(0, 150, 0);
     p.polarLine(90, 150, 50);
   }; 
@@ -54,7 +54,7 @@ let sketch4 = function(p) {
     p.noFill();
     p.stroke('#ccc');
     p.strokeWeight(0.5); 
-    polar.setCenter(w/2, h/2);
+    polar.setCenter(w/2, h/2+5);
     p.polarLine(0, 150, 0);
     p.polarLine(30, 150, 0);
     p.polarLine(60, 150, 0);

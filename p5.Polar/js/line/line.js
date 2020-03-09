@@ -40,7 +40,7 @@ const lv1_1 = (userInput, cm) => {
 	      document.getElementById('msg').innerText = 'Pass! (*´▽`*)';
 	      setTimeout(() => { 
 		      let lv1_2Val = '<h4>Level 1.2 Line</h4>'
-	          + '<p><hint><b>Mission</b></hint> ' 
+	          + '<p><hint><b>Task</b></hint> ' 
 	          + 'Draw two lines by calling polarLine() function twice.</p> '
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '
@@ -110,7 +110,7 @@ const lv1_2 = (userInput, cm) => {
 	      document.getElementById('msg').innerText = 'Pass! (*´▽`*)';
 	      setTimeout(() => { 
 		      let lv1_3Val = '<h4>Level 1.3 Line</h4>'
-		      	+ '<p><hint><b>Mission</b></hint> '
+		      	+ '<p><hint><b>Task</b></hint> '
 	          + 'Draw two lines by calling polarLine() function twice. Set distance value for the horizontal line.</p> '
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '
@@ -180,7 +180,7 @@ const lv1_3 = (userInput, cm) => {
 	      document.getElementById('msg').innerText = 'Pass! (*´▽`*)';
 	      setTimeout(() => { 
 		      let lv1_4Val = '<h4>Level 1.4 Line</h4>'
-		      	+ '<p><hint><b>Mission</b></hint> '
+		      	+ '<p><hint><b>Task</b></hint> '
 		      	+ 'Draw six lines by calling polarLine() function six times with different angles.</p> '
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '

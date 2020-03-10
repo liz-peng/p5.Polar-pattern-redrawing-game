@@ -162,6 +162,14 @@ key {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  z-index: 3;
+}
+
+#measurement {
+  grid-area: polar;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   z-index: 2;
 }
 

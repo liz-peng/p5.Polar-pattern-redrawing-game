@@ -56,7 +56,7 @@ let m3 = function(m) {
     m.fill(204, 204, 204, 150);
     m.text('# Lv 1.3', -w/3-50, -h/3-30);
     m.text('Radius 120', -w/3-50, -h/3-15);
-    m.text('Right Offset 50', -w/3-50, -h/3);
+    m.text('Distance 50', -w/3-50, -h/3);
     m.text('0°', -3, -120);
     m.text('90°', 182, 12);
   }; 

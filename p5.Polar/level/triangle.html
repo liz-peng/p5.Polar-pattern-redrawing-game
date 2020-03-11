@@ -11,6 +11,7 @@
     <script src="../js/polar.js"></script>
     <script src="../js/triangle/triangle.js"></script>
     <script src="../js/triangle/triangle_example.js"></script>
+    <script src="../js/triangle/triangle_hint.js"></script>
   </head>
   <body>
     <div id='container'>
@@ -30,9 +31,9 @@
           </div>
         </div>
         <div id='intro'>
-          <h4>Level-2.1 Triangle</h4>
-          <p><hint><b>Mission</b></hint> Draw a triangle with <b>radius of 100</b> by calling polarTriangle() function. See the function details below</p> 
-          <p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> is the function to draw a single triangle. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter). For example, polarTriangle(30, 50, 0) draws a triangle starts with 30 degree of angle and radius of 50</p>
+          <h4>Level 2.1 Triangle</h4>
+          <p><hint><b>Task</b></hint> Draw a triangle by calling polarTriangle() function. See the function details below.</p> 
+          <p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> is the function to draw a single triangle. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter). For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.</p>
           <p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>
         </div>
         <div id='codemirror'></div>
@@ -42,10 +43,16 @@
           <div id="msg"></div>
         </div>
         <div id='userDrawing'>
-          <div id='draw1' class='col1-row1'></div>
-          <div id='draw2' class='col2-row1'></div>
-          <div id='draw3' class='col1-row2'></div>
-          <div id='draw4' class='col2-row2'></div>
+          <div id='draw1' class=''></div>
+          <div id='draw2' class=''></div>
+          <div id='draw3' class=''></div>
+          <div id='draw4' class=''></div>
+        </div>
+        <div id='measurement'>
+          <div id='m1' class=''></div>
+          <div id='m2' class=''></div>
+          <div id='m3' class=''></div>
+          <div id='m4' class=''></div>
         </div>
         <div id='polarExample'>
           <div id='sketch1' class='col1-row1'></div>

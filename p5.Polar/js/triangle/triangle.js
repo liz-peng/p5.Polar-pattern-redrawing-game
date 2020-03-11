@@ -1,15 +1,19 @@
 // 2.1
 const lv2_1Pattern = [
-	's.polarTriangle(0,100)'
+	's.polarTriangle(0,90)'
 ];
 
 const lv2_1 = (userInput, cm) => {
 	userInput = userInput.map(substr =>
+		substr.replace('(120,90', '(0,90')
+	).map(substr =>
+		substr.replace('(240,90', '(0,90')
+	).map(substr =>
 		substr.replace(',0)', ')')
 	);
 	
-	if(document.getElementById('defaultCanvas4')) {
-    document.getElementById('defaultCanvas4').remove();
+	if(document.getElementById('defaultCanvas8')) {
+    document.getElementById('defaultCanvas8').remove();
     document.getElementById('msg').innerText = '';
   } 
 
@@ -33,20 +37,18 @@ const lv2_1 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
-	      s.polarTriangle(0, 100, 0);
+	      s.polarTriangle(0, 90, 0);
 	      example1.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv2_2Val = '<h4>Level-2.2 Triangle</h4>'
-	          + '<p><hint><b>Mission</b></hint> ' 
-	          + 'Draw a triangle, starts with <b>angle 0 and radius of 100</b>. '
-	          +	'And draw another triangle starts with <b>angle 180 and radius of 100</b> '
-	          + 'by calling polarTriangle() function twice</p> '
+		      let lv2_2Val = '<h4>Level 2.2 Triangle</h4>'
+	          + '<p><hint><b>Task</b></hint> ' 
+	          + 'Draw two triangles by calling polarTriangle() function twice.</p>'
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> '
 	          + 'is the function to draw a single triangle. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
-	          + 'For example, polarTriangle(30, 50, 0) draws a triangle starts with 30 degree of angle and radius of 50</p>'
+	          + 'For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.</p>'
 	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
 		      document.getElementById('intro').innerHTML = lv2_2Val;
 		      document.getElementById('msg').innerText = '';
@@ -61,17 +63,25 @@ const lv2_1 = (userInput, cm) => {
 
 // 2.2
 const lv2_2Pattern = [
-	's.polarTriangle(0,100)',
-  's.polarTriangle(180,100)'
+	's.polarTriangle(0,90)',
+  's.polarTriangle(180,90)'
 ];
 
 const lv2_2 = (userInput, cm) => {
 	userInput = userInput.map(substr =>
+		substr.replace('(120,90', '(0,90')
+	).map(substr =>
+		substr.replace('(240,90', '(0,90')
+	).map(substr =>
+		substr.replace('(60,90', '(180,90')
+	).map(substr =>
+		substr.replace('(300,90', '(180,90')
+	).map(substr =>
 		substr.replace(',0)', ')')
 	);
 	
-	if(document.getElementById('defaultCanvas5')) {
-    document.getElementById('defaultCanvas5').remove();
+	if(document.getElementById('defaultCanvas9')) {
+    document.getElementById('defaultCanvas9').remove();
     document.getElementById('msg').innerText = '';
   } 
 
@@ -99,22 +109,20 @@ const lv2_2 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
-	      s.polarTriangle(0, 100, 0);
+	      s.polarTriangle(0, 90, 0);
 	      s.stroke('#77bd98');
-    		s.polarTriangle(180, 100, 0);
+    		s.polarTriangle(180, 90, 0);
 	      example2.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv2_3Val = '<h4>Level-2.3 Triangle</h4>'
-	          + '<p><hint><b>Mission</b></hint> ' 
-	          + 'Draw a triangle, starts with <b>angle 0, radius 100 and distance of 50</b>. '
-	          +	'And draw another triangle starts with <b>angle 180, radius 100 and distance of 50</b> '
-	          + 'by calling polarTriangle() function twice</p> '
+		      let lv2_3Val = '<h4>Level 2.3 Triangle</h4>'
+	          + '<p><hint><b>Task</b></hint> ' 
+	          + 'Draw two triangles by calling polarTriangle() function twice.</p>'
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> '
 	          + 'is the function to draw a single triangle. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
-	          + 'For example, polarTriangle(30, 50, 0) draws a triangle starts with 30 degree of angle and radius of 50</p>'
+	          + 'For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.</p>'
 	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
 		      document.getElementById('intro').innerHTML = lv2_3Val;
 		      document.getElementById('msg').innerText = '';
@@ -129,13 +137,25 @@ const lv2_2 = (userInput, cm) => {
 
 // 2.3
 const lv2_3Pattern = [
-	's.polarTriangle(0,100,50)',
-  's.polarTriangle(180,100,50)'
+	's.polarTriangle(0,90,45)',
+  's.polarTriangle(180,90,45)'
 ];
 
 const lv2_3 = (userInput, cm) => {
-	if(document.getElementById('defaultCanvas6')) {
-    document.getElementById('defaultCanvas6').remove();
+	userInput = userInput.map(substr =>
+		substr.replace('(120,90', '(0,90')
+	).map(substr =>
+		substr.replace('(240,90', '(0,90')
+	).map(substr =>
+		substr.replace('(60,90', '(180,90')
+	).map(substr =>
+		substr.replace('(300,90', '(180,90')
+	).map(substr =>
+		substr.replace(',0)', ')')
+	);
+
+	if(document.getElementById('defaultCanvas10')) {
+    document.getElementById('defaultCanvas10').remove();
     document.getElementById('msg').innerText = '';
   } 
 
@@ -163,22 +183,20 @@ const lv2_3 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
 	      s.stroke('#cef19d');
-	      s.polarTriangle(0, 100, 50);
+	      s.polarTriangle(0, 90, 45);
 	      s.stroke('#77bd98');
-    		s.polarTriangle(180, 100, 50);
+    		s.polarTriangle(180, 90, 45);
 	      example3.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
-		      let lv2_4Val = '<h4>Level-2.4 Triangle</h4>'
-	          + '<p><hint><b>Mission</b></hint> ' 
-	          + 'Draw four triangles with <b>radius 50 and distance of 100</b> '
-	          + 'and with four different angles <b>0, 90, 180 and 270</b>. '
-	          + 'Call polarTriangle() function four times. Each of triangle function should have different angle</p> '
+		      let lv2_4Val = '<h4>Level 2.4 Triangle</h4>'
+	          + '<p><hint><b>Task</b></hint> ' 
+	          + 'Draw four triangles by calling polarTriangle() function four times.</p>'
 	          + '<p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> '
 	          + 'is the function to draw a single triangle. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
-	          + 'For example, polarTriangle(30, 50, 0) draws a triangle starts with 30 degree of angle and radius of 50</p>'
+	          + 'For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.</p>'
 	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
 		      document.getElementById('intro').innerHTML = lv2_4Val;
 		      document.getElementById('msg').innerText = '';
@@ -193,19 +211,35 @@ const lv2_3 = (userInput, cm) => {
 
 // 2.4
 const lv2_4Pattern = [
-	's.polarTriangle(0,50,100)',
-  's.polarTriangle(90,50,100)',
-  's.polarTriangle(180,50,100)',
-  's.polarTriangle(270,50,100)'
+	's.polarTriangle(0,40,80)',
+  's.polarTriangle(90,40,80)',
+  's.polarTriangle(180,40,80)',
+  's.polarTriangle(270,40,80)'
 ];
 
 const lv2_4 = (userInput, cm) => {
 	userInput = userInput.map(substr =>
+		substr.replace('(120,40', '(0,40')
+	).map(substr =>
+		substr.replace('(240,40', '(0,40')
+	).map(substr =>
+		substr.replace('(210,40', '(90,40')
+	).map(substr =>
+		substr.replace('(330,40', '(90,40')
+	).map(substr =>
+		substr.replace('(60,40', '(180,40')
+	).map(substr =>
+		substr.replace('(300,40', '(180,40')
+	).map(substr =>
+		substr.replace('(150,40', '(270,40')
+	).map(substr =>
+		substr.replace('(30,40', '(270,40')
+	).map(substr =>
 		substr.replace(',0)', ')')
 	);
 
-	if(document.getElementById('defaultCanvas7')) {
-    document.getElementById('defaultCanvas7').remove();
+	if(document.getElementById('defaultCanvas11')) {
+    document.getElementById('defaultCanvas11').remove();
     document.getElementById('msg').innerText = '';
   } 
 
@@ -233,19 +267,21 @@ const lv2_4 = (userInput, cm) => {
 	    else {
       	s.strokeWeight(1); 
 	      s.stroke('#f9c6b3');
-	      s.polarTriangle(0, 50, 100);
+	      s.polarTriangle(0, 40, 80);
 	      s.stroke('#e29686');
-				s.polarTriangle(90, 50, 100);
+				s.polarTriangle(90, 40, 80);
 				s.stroke('#cef19d');
-				s.polarTriangle(180, 50, 100);
+				s.polarTriangle(180, 40, 80);
 				s.stroke('#77bd98');
-				s.polarTriangle(270, 50, 100);
+				s.polarTriangle(270, 40, 80);
 	      example4.drawingContext.lineWidth = 1;
 	      document.getElementById('msg').innerText = 'Pass!';
 	      setTimeout(() => { 
 		      let nextLevel = '<h3>Congratulations! (*´▽`*)</h3>'
-		      + '<p>You just learned how to draw triangles with single drawing function. Click the button below and move to the next level</p>'
-		      + '<button onclick="window.location.href = \'../challenge/challenge_1.html\'">Next Level - Challenge &#8544;</button>';
+		      + '<p>You just learned how to draw triangles with p5.Polar single drawing function. ' 
+		      + '<b>Multiple drawing function will be introduced in the future</b>. '
+		      + 'Click the button below and move to the next level.</p>'
+		      + '<button onclick="window.location.href = \'../level/challenge_1.html\'">Next Level - Triangle</button>';
 	        document.getElementById('intro').innerHTML = nextLevel;
 		      document.getElementById('msg').innerText = '';
 		    }, 1000);

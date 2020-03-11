@@ -150,8 +150,6 @@ const lv2_3 = (userInput, cm) => {
 		substr.replace('(60,90', '(180,90')
 	).map(substr =>
 		substr.replace('(300,90', '(180,90')
-	).map(substr =>
-		substr.replace(',0)', ')')
 	);
 
 	if(document.getElementById('defaultCanvas10')) {
@@ -234,8 +232,6 @@ const lv2_4 = (userInput, cm) => {
 		substr.replace('(150,40', '(270,40')
 	).map(substr =>
 		substr.replace('(30,40', '(270,40')
-	).map(substr =>
-		substr.replace(',0)', ')')
 	);
 
 	if(document.getElementById('defaultCanvas11')) {

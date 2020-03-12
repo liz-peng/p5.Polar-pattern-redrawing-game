@@ -13,7 +13,7 @@ hr {
 }
 
 h4 {
-  color: #e78c45;
+  color: #e1b16a;
 }
 
 a {
@@ -40,17 +40,17 @@ button:hover {
 }
 
 hint {
-  background: #ccc;
-  color: #4c4c4c;
+  background: rgba(204, 204, 204, 0.5);
+  color: #f2f2f2;
   padding: 0 0.5em;
 }
 
 func {
-  color: #d54e53;
+  color: #ce5a57;
 }
 
 key {
-  color: #a16a94;
+  color: #78a5a3;
 }
 
 .logo {

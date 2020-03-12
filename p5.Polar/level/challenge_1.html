@@ -4,13 +4,14 @@
     <title>p5.Polar Challenge 1</title>
     <script src='../../codemirror/lib/codemirror.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='../css/challenge_1.css' rel='stylesheet'>
+    <link href='../css/four_levels.css' rel='stylesheet'>
     <link href='../../codemirror/lib/codemirror.css' rel='stylesheet'>
     <script src="../../codemirror/mode/javascript/javascript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
     <script src="../js/polar.js"></script>
     <script src="../js/challenge/challenge_1.js"></script>
     <script src="../js/challenge/challenge_1_example.js"></script>
+    <script src="../js/challenge/challenge_1_hint.js"></script>
   </head>
   <body>
     <div id='container'>
@@ -30,9 +31,12 @@
           </div>
         </div>
         <div id='intro'>
-          <h4>Challenge-1.1 Line & Triangle</h4>
-          <p><hint><b>Mission</b></hint> Draw a line with <b>radius of 150</b> by calling polarLine() function</p> 
-          <p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> is the function to draw a single triangle. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter)</p>
+          <h4>Challenge 1.1 Line & Triangle</h4>
+          <p><hint><b>Task</b></hint> Draw a vertical line</p> 
+          <p><hint><b>Hint</b></hint><br>
+            <b>polarLine(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b><br>
+            <b>polarTriangle(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b>
+          </p>
           <p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>
         </div>
         <div id='codemirror'></div>
@@ -42,10 +46,16 @@
           <div id="msg"></div>
         </div>
         <div id='userDrawing'>
-          <div id='draw1' class='col1-row1'></div>
-          <div id='draw2' class='col2-row1'></div>
-          <div id='draw3' class='col1-row2'></div>
-          <div id='draw4' class='col2-row2'></div>
+          <div id='draw1' class=''></div>
+          <div id='draw2' class=''></div>
+          <div id='draw3' class=''></div>
+          <div id='draw4' class=''></div>
+        </div>
+        <div id='measurement'>
+          <div id='m1' class=''></div>
+          <div id='m2' class=''></div>
+          <div id='m3' class=''></div>
+          <div id='m4' class=''></div>
         </div>
         <div id='polarExample'>
           <div id='sketch1' class='col1-row1'></div>

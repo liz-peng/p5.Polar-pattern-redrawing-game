@@ -30,19 +30,19 @@ const lv1_1 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
 	      s.polarLine(0, 120, 0);
 	      example1.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerText = 'Pass! (*´▽`*)';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let lv1_2Val = '<h4>Level 1.2 Line</h4>'
-	          + '<p><hint><b>Task</b></hint> ' 
+	          + '<p><hint><b>Task</b></hint><br>' 
 	          + 'Draw two lines by calling polarLine() function twice.</p> '
-	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
+	          + '<p><hint><b>Hint</b></hint><br><func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
@@ -98,7 +98,7 @@ const lv1_2 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -107,12 +107,12 @@ const lv1_2 = (userInput, cm) => {
 	      s.stroke('#77bd98');
     		s.polarLine(90, 120, 0);
 	      example2.drawingContext.lineWidth = 1; 
-	      document.getElementById('msg').innerText = 'Pass! (*´▽`*)';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let lv1_3Val = '<h4>Level 1.3 Line</h4>'
-		      	+ '<p><hint><b>Task</b></hint> '
+		      	+ '<p><hint><b>Task</b></hint><br>'
 	          + 'Draw two lines by calling polarLine() function twice. Set distance value for the horizontal line.</p> '
-	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
+	          + '<p><hint><b>Hint</b></hint><br><func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
@@ -168,7 +168,7 @@ const lv1_3 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -177,12 +177,12 @@ const lv1_3 = (userInput, cm) => {
 	      s.stroke('#77bd98');
     		s.polarLine(90, 120, 50);
 	      example3.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerText = 'Pass! (*´▽`*)';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let lv1_4Val = '<h4>Level 1.4 Line</h4>'
-		      	+ '<p><hint><b>Task</b></hint> '
+		      	+ '<p><hint><b>Task</b></hint><br>'
 		      	+ 'Draw six lines by calling polarLine() function six times with different angles.</p> '
-	          + '<p><hint><b>Hint</b></hint> <func><b>polarLine()</b></func> '
+	          + '<p><hint><b>Hint</b></hint><br><func><b>polarLine()</b></func> '
 	          + 'is the function to draw a single line. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
@@ -250,7 +250,7 @@ const lv1_4 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -267,7 +267,7 @@ const lv1_4 = (userInput, cm) => {
 				s.stroke('#e29686');
 				s.polarLine(150, 120, 0);
 	      example4.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerText = 'Pass! (*´▽`*)';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let nextLevel = '<h3>Congratulations! (*´▽`*)</h3>'
 		      + '<p>You just learned how to draw lines with p5.Polar single drawing function. ' 
@@ -276,6 +276,9 @@ const lv1_4 = (userInput, cm) => {
 		      + '<button onclick="window.location.href = \'../level/triangle.html\'">Next Level - Triangle</button>';
 	        document.getElementById('intro').innerHTML = nextLevel;
 		      document.getElementById('msg').innerText = '';
+		      cm.setValue('// type your code here\n');
+		      cm.setCursor({line: 1});
+		      cm.options.readOnly = true;
 		    }, 1500);
 	    }
     }; 

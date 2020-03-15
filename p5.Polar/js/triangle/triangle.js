@@ -32,19 +32,19 @@ const lv2_1 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
 	      s.polarTriangle(0, 90, 0);
 	      example1.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerText = 'Pass!';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let lv2_2Val = '<h4>Level 2.2 Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint> ' 
+	          + '<p><hint><b>Task</b></hint><br>' 
 	          + 'Draw two triangles by calling polarTriangle() function twice.</p>'
-	          + '<p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> '
+	          + '<p><hint><b>Hint</b></hint><br><func><b>polarTriangle()</b></func> '
 	          + 'is the function to draw a single triangle. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
@@ -104,7 +104,7 @@ const lv2_2 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -113,12 +113,12 @@ const lv2_2 = (userInput, cm) => {
 	      s.stroke('#77bd98');
     		s.polarTriangle(180, 90, 0);
 	      example2.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerText = 'Pass!';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let lv2_3Val = '<h4>Level 2.3 Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint> ' 
+	          + '<p><hint><b>Task</b></hint><br>' 
 	          + 'Draw two triangles by calling polarTriangle() function twice.</p>'
-	          + '<p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> '
+	          + '<p><hint><b>Hint</b></hint><br><func><b>polarTriangle()</b></func> '
 	          + 'is the function to draw a single triangle. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
@@ -176,7 +176,7 @@ const lv2_3 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -185,12 +185,12 @@ const lv2_3 = (userInput, cm) => {
 	      s.stroke('#77bd98');
     		s.polarTriangle(180, 90, 45);
 	      example3.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerText = 'Pass!';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let lv2_4Val = '<h4>Level 2.4 Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint> ' 
+	          + '<p><hint><b>Task</b></hint><br>' 
 	          + 'Draw four triangles by calling polarTriangle() function four times.</p>'
-	          + '<p><hint><b>Hint</b></hint> <func><b>polarTriangle()</b></func> '
+	          + '<p><hint><b>Hint</b></hint><br><func><b>polarTriangle()</b></func> '
 	          + 'is the function to draw a single triangle. '
 	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
 	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
@@ -258,7 +258,7 @@ const lv2_4 = (userInput, cm) => {
       	s.stroke('#ccc');
       	s.strokeWeight(1); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerText = 'Try again!';
+	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -271,7 +271,7 @@ const lv2_4 = (userInput, cm) => {
 				s.stroke('#77bd98');
 				s.polarTriangle(270, 40, 80);
 	      example4.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerText = 'Pass!';
+	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
 	      setTimeout(() => { 
 		      let nextLevel = '<h3>Congratulations! (*´▽`*)</h3>'
 		      + '<p>You just learned how to draw triangles with p5.Polar single drawing function. ' 
@@ -280,6 +280,9 @@ const lv2_4 = (userInput, cm) => {
 		      + '<button onclick="window.location.href = \'../level/challenge_1.html\'">Next Level - Triangle</button>';
 	        document.getElementById('intro').innerHTML = nextLevel;
 		      document.getElementById('msg').innerText = '';
+		      cm.setValue('// type your code here\n');
+		      cm.setCursor({line: 1});
+		      cm.options.readOnly = true;
 		    }, 1000);
 	    }
     }; 

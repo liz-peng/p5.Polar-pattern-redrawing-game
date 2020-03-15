@@ -61,6 +61,10 @@ key {
   color: #78a5a3;
 }
 
+check {
+  font-size: 34px;
+}
+
 .logo {
   padding-left: 15px;
 }

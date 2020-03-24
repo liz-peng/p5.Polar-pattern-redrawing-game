@@ -13,7 +13,6 @@ let m1 = function(m) {
     m.textSize(11);
     m.fill(204, 204, 204, 150);
     m.text('# Lv 1.1', -w/3-50, -h/3-30);
-    m.text('Radius 120', -w/3-50, -h/3-15);
     m.text('0°', -3, -120);
   }; 
 };

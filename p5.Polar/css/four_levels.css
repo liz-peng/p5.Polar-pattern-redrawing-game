@@ -46,7 +46,7 @@ button:hover {
   background: #bf464a;
 }
 
-hint {
+task, hint {
   background: rgba(145, 151, 175, 0.7);
   color: #e9eaef;
   padding: 0 0.5em;
@@ -195,6 +195,11 @@ check {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   z-index: 1;
+}
+
+.sketchExp {
+  width: 240px;
+  height: 240px;
 }
 
 .col1-row1 {

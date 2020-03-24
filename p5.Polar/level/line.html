@@ -31,13 +31,22 @@
         </div>
         <div id='intro'>
           <h4>Level 1.1 Line</h4>
-          <p><hint>Task</hint><br> 
-            Draw a line by calling polarLine() function. See the function details below.
+          <p>
+            <task>Task</task>
+            <br>Draw a line starts with <b>radius 120</b> by calling polarLine() function.
+            <br>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys
           </p> 
-          <p><hint>Hint</hint><br> 
-            <func><b>polarLine()</b></func> is the function to draw a single line. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter). For example, polarLine(30, 50, 10) draws a line starts with 30 degree of angle, radius of 50, and 10 distance from center point.
+          <p>
+            <hint>Hint</hint>
+            <br><func><b>polarLine()</b></func> is the function to draw a single line. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter). 
+            <br><br>For example: 
+            <br>(1) polarLine(0, 40, 0) draws a line starting with a radius of 40.
+            <div id='sketchExpRadius' class='sketchExp'></div>
+            <br>(2) polarLine(30, 40, 0) draws a line starting at angle 30, with a radius of 40.
+            <div id='sketchExpAngle' class='sketchExp'></div>
+            <br>(3) polarLine(30, 40, 40) draws a line starting at angle 30, with a radius of 40, and move 40 distance from center point.
+            <div id='sketchExpDis' class='sketchExp'></div>
           </p>
-          <p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>
         </div>
         <div id='codemirror'></div>
         <div id='console'>

@@ -10,8 +10,8 @@ const lv1_1 = (userInput, cm) => {
 		substr.replace(',0)', ')')
 	);
 	
-	if(document.getElementById('defaultCanvas7')) {
-    document.getElementById('defaultCanvas7').remove();
+	if(document.getElementById('defaultCanvas11')) {
+    document.getElementById('defaultCanvas11').remove();
     document.getElementById('msg').innerText = '';
     document.querySelector('#lv1 p').innerHTML = '';
   } 
@@ -32,7 +32,7 @@ const lv1_1 = (userInput, cm) => {
       	s.strokeWeight(2); 
 	      eval(userInput.join());
 	      document.querySelector('#lv1 p').classList.add('wrong');
-	      document.querySelector('#lv1 p').innerHTML = '<b>Wrong Answer</b>';
+	      document.querySelector('#lv1 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -76,8 +76,8 @@ const lv1_2 = (userInput, cm) => {
 		substr.replace(',0)', ')')
 	);
 	
-	if(document.getElementById('defaultCanvas8')) {
-    document.getElementById('defaultCanvas8').remove();
+	if(document.getElementById('defaultCanvas12')) {
+    document.getElementById('defaultCanvas12').remove();
     document.getElementById('msg').innerText = '';
     document.querySelector('#lv2 p').innerHTML = '';
   } 
@@ -102,7 +102,7 @@ const lv1_2 = (userInput, cm) => {
       	s.strokeWeight(2); 
 	      eval(userInput.join());
 	      document.querySelector('#lv2 p').classList.add('wrong');
-	      document.querySelector('#lv2 p').innerHTML = '<b>Wrong Answer</b>';
+	      document.querySelector('#lv2 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -149,8 +149,8 @@ const lv1_3 = (userInput, cm) => {
 		substr.replace(',0)', ')')
 	);
 
-	if(document.getElementById('defaultCanvas9')) {
-    document.getElementById('defaultCanvas9').remove();
+	if(document.getElementById('defaultCanvas13')) {
+    document.getElementById('defaultCanvas13').remove();
     document.getElementById('msg').innerText = '';
     document.querySelector('#lv3 p').innerHTML = '';
   } 
@@ -175,7 +175,7 @@ const lv1_3 = (userInput, cm) => {
       	s.strokeWeight(2); 
 	      eval(userInput.join());
 	      document.querySelector('#lv3 p').classList.add('wrong');
-	      document.querySelector('#lv3 p').innerHTML = '<b>Wrong Answer</b>';
+	      document.querySelector('#lv3 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -233,8 +233,8 @@ const lv1_4 = (userInput, cm) => {
 		substr.replace(',0)', ')')
 	);
 
-	if(document.getElementById('defaultCanvas10')) {
-    document.getElementById('defaultCanvas10').remove();
+	if(document.getElementById('defaultCanvas14')) {
+    document.getElementById('defaultCanvas14').remove();
     document.getElementById('msg').innerText = '';
   } 
 
@@ -258,7 +258,7 @@ const lv1_4 = (userInput, cm) => {
       	s.strokeWeight(2); 
 	      eval(userInput.join());
 	      document.querySelector('#lv4 p').classList.add('wrong');
-	      document.querySelector('#lv4 p').innerHTML = '<b>Wrong Answer</b>';
+	      document.querySelector('#lv4 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -281,20 +281,14 @@ const lv1_4 = (userInput, cm) => {
 	      document.querySelector('#lv4 p').classList.add('pass');
 	      document.querySelector('#lv4 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-	      	// let nextLevel = 'Level 1.4 Line';
-		      // let lv1_4Task = '<task>Task</task>'
-	       //    + '<br>Draw six lines with <b>radius 120</b> and six different angles.';
-		      // document.querySelector('#intro h4').innerText = lv1_4Title;
-		      // document.getElementsByTagName('p')[0].innerHTML = lv1_4Task;
-		      // document.querySelector('#lv3 p').innerHTML = '';
-		      // document.getElementById('msg').innerText = '';
-		      
-		      let nextLevel = '<h3>Congratulations! (*´▽`*)</h3>'
-		      + '<p>You just learned how to draw lines with p5.Polar single drawing function. ' 
-		      + '<b>Multiple drawing function will be introduced in the future</b>. '
-		      + 'Click the button below and move to the next level.</p>'
-		      + '<button onclick="window.location.href = \'../level/triangle.html\'">Next Level - Triangle</button>';
-	        document.getElementById('intro').innerHTML = nextLevel;
+	      	let nextLevel = '<h3>Congratulations!</h3>'
+	      	+ '<p>You just learned how to draw lines with p5.Polar single drawing function. '
+	      	+ '<b>Multiple drawing function will be introduced in the future</b>. '
+	      	+ '<br><br>'
+	      	+ 'Click the button below and move to the next level.</p>'
+	      	+ '<button onclick="window.location.href = \'../level/triangle.html\'">Next Level - Triangle</button>';
+		      document.querySelector('#intro').innerHTML = nextLevel;
+		      document.querySelector('#lv4 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});

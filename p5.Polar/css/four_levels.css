@@ -150,8 +150,8 @@ check {
 #codemirror {
   grid-area: codemirror;
   overflow: auto;
-  border-top: 4px solid #9fabba;
-  border-bottom: 4px solid #9fabba;
+  border-top: 5px solid #9fabba;
+  border-bottom: 5px solid #9fabba;
   padding-top: 15px;
   padding-right: 15px;
 }
@@ -195,6 +195,36 @@ check {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   z-index: 1;
+}
+
+#lv {
+  grid-area: polar;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  z-index: 1;
+  font-size: 12px;
+  color: #9fabba;
+}
+
+#lv p {
+  font-size: 20px;
+}
+
+#lv p.wrong {
+  color: #ce5a57;
+}
+
+#lv p.pass {
+  color: #78a5a3;
+}
+
+#lv1, #lv2 {
+  padding: 10px 0 0 20px;
+}
+
+#lv3, #lv4 {
+  padding: 15px 0 0 20px;
 }
 
 .sketchExp {

@@ -22,14 +22,6 @@ driver.defineSteps([
     }
   },
   {
-    element: '#step4',
-    popover: {
-      title: 'Level',
-      description: 'Check current level',
-      position: 'top-center'
-    }
-  },
-  {
     element: '#step5',
     popover: {
       title: 'Mission',

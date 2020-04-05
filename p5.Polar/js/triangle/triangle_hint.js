@@ -12,8 +12,6 @@ let m1 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Lv 2.1', -w/3-50, -h/3-30);
-    m.text('Radius 90', -w/3-50, -h/3-15);
     m.text('0°', -3, -100);
   }; 
 };
@@ -33,8 +31,6 @@ let m2 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Lv 2.2', -w/3-50, -h/3-30);
-    m.text('Radius 90', -w/3-50, -h/3-15);
     m.text('0°', -3, -100);
     m.text('180°', -10, 110);
   }; 
@@ -54,9 +50,6 @@ let m3 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Lv 2.3', -w/3-50, -h/3-30);
-    m.text('Radius 90', -w/3-50, -h/3-15);
-    m.text('Distance 45', -w/3-50, -h/3);
     m.text('0°', -3, -145);
     m.text('180°', -10, 155);
   }; 
@@ -76,9 +69,6 @@ let m4 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Lv 2.4', -w/3-50, -h/3-30);
-    m.text('Radius 40', -w/3-50, -h/3-15);
-    m.text('Distance 80', -w/3-50, -h/3);
     m.text('0°', -3, -130);
     m.text('90°', 132, 5);
     m.text('180°', -10, 145);

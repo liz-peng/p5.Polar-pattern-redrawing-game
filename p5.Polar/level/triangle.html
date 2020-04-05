@@ -24,26 +24,44 @@
               <div class='dropdown-content'>
                 <a href='line.html'>Line</a>
                 <a href='#'>Triangle</a>
-                <a href='challenge_1.html'>Challenge &#8544;</a>
+                <a href='challenge_1.html'><b>Challenge &#8544;</b></a>
               </div>
             </div>
           </div>
         </div>
         <div id='intro'>
           <h4>Level 2.1 Triangle</h4>
-          <p><hint>Task</hint><br> 
-            Draw a triangle by calling polarTriangle() function. See the function details below.
+          <p>
+            <task>Task</task>
+            <br>Draw a triangle starts with <b>radius 90</b> by calling polarTriangle() function.
           </p> 
-          <p><hint>Hint</hint><br> 
-            <func><b>polarTriangle()</b></func> is the function to draw a single triangle. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter). For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.
+          <p>
+            <hint>Code, Compile, Run</hint>
+            <br>Type answer in the box below and run the code with <key><b>Shift + Enter</b></key> keys.
           </p>
-          <p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>
+          <p>
+            <hint>Hint</hint>
+            <br><func><b>polarTriangle()</b></func> is the function to draw a single triangle. Three parameters can be passed to the single drawing funciton by the following order: <b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter). 
+            <br><br>For example: 
+            <br>(1) polarTriangle(0, 40, 0) draws a triangle starting with a radius of 40.
+            <div id='sketchExpRadius' class='sketchExp'></div>
+            <br>(2) polarTriangle(30, 40, 0) draws a triangle starting at angle 30, with a radius of 40.
+            <div id='sketchExpAngle' class='sketchExp'></div>
+            <br>(3) polarTriangle(30, 40, 40) draws a triangle starting at angle 30, with a radius of 40, and move 40 distance from center point.
+            <div id='sketchExpDis' class='sketchExp'></div>
+          </p>
         </div>
         <div id='codemirror'></div>
         <div id='console'>
           <span>Console</span>
           <hr>
           <div id="msg"></div>
+        </div>
+        <div id='lv'>
+          <div id='lv1' class=''># Lv 2.1<p></p></div>
+          <div id='lv2' class=''># Lv 2.2<p></p></div>
+          <div id='lv3' class=''># Lv 2.3<p></p></div>
+          <div id='lv4' class=''># Lv 2.4<p></p></div>
         </div>
         <div id='userDrawing'>
           <div id='draw1' class=''></div>

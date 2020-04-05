@@ -1,3 +1,115 @@
+// polar coordinate radius example
+let sketchExpRadius = function(e) { 
+  e.setup = function() {
+    let w = document.getElementById('sketchExpRadius').clientWidth;
+    let h = document.getElementById('sketchExpRadius').clientHeight;
+    e.createCanvas(w, h);
+    polar.setCenter(w/2, h/2);
+    e.noFill();
+    e.stroke('#E78C45');
+    e.strokeWeight(2.0);
+    e.polarTriangle(0, 40, 0);
+    e.strokeWeight(0.5);
+    e.stroke(204, 204, 204, 120);
+    for(i=1; i<=4; i++) {
+      e.polarEllipse(0, i*20, 0);
+    }
+    e.polarLines(3, 100, 0);
+
+    // text
+    e.noStroke();
+    e.textSize(10);
+    e.fill(204, 204, 204, 150);
+    e.text('80', -50, -65);
+    e.text('60', -40, -48);
+    e.text('40', -30, -30);
+    e.textSize(11);
+    e.text('0°', -3, -110);
+    e.text('60°', 95, -55);
+    e.text('120°', 95, 60);
+    e.text('180°', -10, 115);
+    e.text('240°', -115, 65);
+    e.text('300°', -115, -55);
+  }; 
+};
+let expRadius = new p5(sketchExpRadius, 'sketchExpRadius');
+
+// polar coordinate angle example
+let sketchExpAngle = function(e) { 
+  e.setup = function() {
+    let w = document.getElementById('sketchExpAngle').clientWidth;
+    let h = document.getElementById('sketchExpAngle').clientHeight;
+    e.createCanvas(w, h);
+    polar.setCenter(w/2, h/2);
+    e.noFill();
+    e.stroke('#E78C45');
+    e.strokeWeight(2.0);
+    e.polarTriangle(30, 40, 0);
+    e.strokeWeight(0.5);
+    e.stroke(204, 204, 204, 120);
+    for(i=1; i<=4; i++) {
+      e.polarEllipse(0, i*20, 0);
+    }
+    e.polarLine(30, 50, 50);
+    e.polarLines(3, 100, 0);
+
+    // text
+    e.noStroke();
+    e.textSize(10);
+    e.fill(204, 204, 204, 150);
+    e.text('80', -50, -65);
+    e.text('60', -40, -48);
+    e.text('40', -30, -30);
+    e.textSize(11);
+    e.text('0°', -3, -110);
+    e.text('30°', 50, -95);
+    e.text('60°', 95, -55);
+    e.text('120°', 95, 60);
+    e.text('180°', -10, 115);
+    e.text('240°', -115, 65);
+    e.text('300°', -115, -55);
+  }; 
+};
+let expAngle = new p5(sketchExpAngle, 'sketchExpAngle');
+
+// polar coordinate distance example
+let sketchExpDis = function(e) { 
+  e.setup = function() {
+    let w = document.getElementById('sketchExpAngle').clientWidth;
+    let h = document.getElementById('sketchExpAngle').clientHeight;
+    e.createCanvas(w, h);
+    polar.setCenter(w/2, h/2);
+    e.noFill();
+    e.stroke('#E78C45');
+    e.strokeWeight(2.0);
+    e.polarTriangle(30, 40, 40);
+    e.strokeWeight(0.5);
+    e.stroke(204, 204, 204, 120);
+    for(i=1; i<=4; i++) {
+      e.polarEllipse(0, i*20, 0);
+    }
+    e.polarLine(30, 50, 50);
+    e.polarLines(3, 100, 0);
+
+    // text
+    e.noStroke();
+    e.textSize(10);
+    e.fill(204, 204, 204, 150);
+    e.text('80', -50, -65);
+    e.text('60', -40, -48);
+    e.text('40', -30, -30);
+    e.textSize(11);
+    e.text('0°', -3, -110);
+    e.text('30°', 50, -95);
+    e.text('60°', 95, -55);
+    e.text('120°', 95, 60);
+    e.text('180°', -10, 115);
+    e.text('240°', -115, 65);
+    e.text('300°', -115, -55);
+  }; 
+};
+let expDis = new p5(sketchExpDis, 'sketchExpDis');
+
 // 2.1
 let sketch1 = function(p) { 
   p.setup = function() {

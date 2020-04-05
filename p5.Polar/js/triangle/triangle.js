@@ -12,9 +12,10 @@ const lv2_1 = (userInput, cm) => {
 		substr.replace(',0)', ')')
 	);
 	
-	if(document.getElementById('defaultCanvas8')) {
-    document.getElementById('defaultCanvas8').remove();
+	if(document.getElementById('defaultCanvas11')) {
+    document.getElementById('defaultCanvas11').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv1 p').innerHTML = '';
   } 
 
   const lv2_1Ans = userInput.every(el => 
@@ -23,34 +24,35 @@ const lv2_1 = (userInput, cm) => {
 	
 	let draw1 = (s) => { 
     s.setup = () => {
-      let w = document.getElementById('sketch1').clientWidth;
-      let h = document.getElementById('sketch1').clientHeight;
+      let w = document.getElementById('draw1').clientWidth;
+      let h = document.getElementById('draw1').clientHeight;
       s.createCanvas(w, h);
       s.noFill();
       polar.setCenter(w/2, h/2);
       if(!lv2_1Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv1 p').classList.add('wrong');
+	      document.querySelector('#lv1 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#cef19d');
 	      s.polarTriangle(0, 90, 0);
 	      example1.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv1 p').classList == 'wrong') {
+	      	document.querySelector('#lv1 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv1 p').classList.add('pass');
+	      document.querySelector('#lv1 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let lv2_2Val = '<h4>Level 2.2 Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint><br>' 
-	          + 'Draw two triangles by calling polarTriangle() function twice.</p>'
-	          + '<p><hint><b>Hint</b></hint><br><func><b>polarTriangle()</b></func> '
-	          + 'is the function to draw a single triangle. '
-	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
-	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
-	          + 'For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.</p>'
-	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
-		      document.getElementById('intro').innerHTML = lv2_2Val;
+		      let lv2_2Title = 'Level 2.2 Triangle';
+		      let lv2_2Task = '<task>Task</task>'
+	          + '<br>Draw two traingles both with <b>radius 90</b> and point in opposite directions.';
+		      document.querySelector('#intro h4').innerText = lv2_2Title;
+		      document.getElementsByTagName('p')[0].innerHTML = lv2_2Task;
+		      document.querySelector('#lv1 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});
@@ -80,9 +82,10 @@ const lv2_2 = (userInput, cm) => {
 		substr.replace(',0)', ')')
 	);
 	
-	if(document.getElementById('defaultCanvas9')) {
-    document.getElementById('defaultCanvas9').remove();
+	if(document.getElementById('defaultCanvas12')) {
+    document.getElementById('defaultCanvas12').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv2 p').innerHTML = '';
   } 
 
   const lv2_2Match = userInput.every(el => 
@@ -95,16 +98,17 @@ const lv2_2 = (userInput, cm) => {
 
 	let draw2 = (s) => { 
     s.setup = () => {
-      let w = document.getElementById('sketch2').clientWidth;
-      let h = document.getElementById('sketch2').clientHeight;
+      let w = document.getElementById('draw2').clientWidth;
+      let h = document.getElementById('draw2').clientHeight;
       s.createCanvas(w, h);
       s.noFill();
       polar.setCenter(w/2, h/2);
       if(!lv2_2Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv2 p').classList.add('wrong');
+	      document.querySelector('#lv2 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -113,18 +117,18 @@ const lv2_2 = (userInput, cm) => {
 	      s.stroke('#77bd98');
     		s.polarTriangle(180, 90, 0);
 	      example2.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv2 p').classList == 'wrong') {
+	      	document.querySelector('#lv2 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv2 p').classList.add('pass');
+	      document.querySelector('#lv2 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let lv2_3Val = '<h4>Level 2.3 Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint><br>' 
-	          + 'Draw two triangles by calling polarTriangle() function twice.</p>'
-	          + '<p><hint><b>Hint</b></hint><br><func><b>polarTriangle()</b></func> '
-	          + 'is the function to draw a single triangle. '
-	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
-	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
-	          + 'For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.</p>'
-	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
-		      document.getElementById('intro').innerHTML = lv2_3Val;
+	      	let lv2_3Title = 'Level 2.3 Triangle';
+		      let lv2_3Task = '<task>Task</task>'
+			      + '<br>Draw two traingles both with <b>radius 90</b> and move <b>45 distance</b> in opposite directions.';
+		      document.querySelector('#intro h4').innerText = lv2_3Title;
+		      document.getElementsByTagName('p')[0].innerHTML = lv2_3Task;
+		      document.querySelector('#lv2 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});
@@ -152,9 +156,10 @@ const lv2_3 = (userInput, cm) => {
 		substr.replace('(300,90', '(180,90')
 	);
 
-	if(document.getElementById('defaultCanvas10')) {
-    document.getElementById('defaultCanvas10').remove();
+	if(document.getElementById('defaultCanvas13')) {
+    document.getElementById('defaultCanvas13').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv4 p').innerHTML = '';
   } 
 
   const lv2_3Match = userInput.every(el => 
@@ -167,16 +172,17 @@ const lv2_3 = (userInput, cm) => {
 
 	let draw3 = (s) => { 
     s.setup = () => {
-      let w = document.getElementById('sketch3').clientWidth;
-      let h = document.getElementById('sketch3').clientHeight;
+      let w = document.getElementById('draw3').clientWidth;
+      let h = document.getElementById('draw3').clientHeight;
       s.createCanvas(w, h);
       s.noFill();
       polar.setCenter(w/2, h/2);
       if(!lv2_3Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv3 p').classList.add('wrong');
+	      document.querySelector('#lv3 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -185,18 +191,18 @@ const lv2_3 = (userInput, cm) => {
 	      s.stroke('#77bd98');
     		s.polarTriangle(180, 90, 45);
 	      example3.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv3 p').classList == 'wrong') {
+	      	document.querySelector('#lv3 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv3 p').classList.add('pass');
+	      document.querySelector('#lv3 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let lv2_4Val = '<h4>Level 2.4 Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint><br>' 
-	          + 'Draw four triangles by calling polarTriangle() function four times.</p>'
-	          + '<p><hint><b>Hint</b></hint><br><func><b>polarTriangle()</b></func> '
-	          + 'is the function to draw a single triangle. '
-	          + 'Three parameters can be passed to the single drawing funciton by the following order: '
-	          + '<b>angle</b>, <b>radius</b>, and <b>distance</b> (distance is an optional parameter) '
-	          + 'For example, polarTriangle(30, 50, 10) draws a triangle starts with 30 degree of angle, radius of 50, and 10 distance from center point.</p>'
-	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
-		      document.getElementById('intro').innerHTML = lv2_4Val;
+	      	let lv2_4Title = 'Level 2.4 Triangle';
+		      let lv2_4Task = '<task>Task</task>'
+			      + '<br>Draw four traingles with <b>radius 40</b>.';
+		      document.querySelector('#intro h4').innerText = lv2_4Title;
+		      document.getElementsByTagName('p')[0].innerHTML = lv2_4Task;
+		      document.querySelector('#lv3 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});
@@ -234,9 +240,10 @@ const lv2_4 = (userInput, cm) => {
 		substr.replace('(30,40', '(270,40')
 	);
 
-	if(document.getElementById('defaultCanvas11')) {
-    document.getElementById('defaultCanvas11').remove();
+	if(document.getElementById('defaultCanvas14')) {
+    document.getElementById('defaultCanvas14').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv4 p').innerHTML = '';
   } 
 
   const lv2_4Match = userInput.every(el => 
@@ -249,16 +256,17 @@ const lv2_4 = (userInput, cm) => {
 
 	let draw4 = (s) => { 
     s.setup = () => {
-      let w = document.getElementById('sketch4').clientWidth;
-      let h = document.getElementById('sketch4').clientHeight;
+      let w = document.getElementById('draw4').clientWidth;
+      let h = document.getElementById('draw4').clientHeight;
       s.createCanvas(w, h);
       s.noFill();
       polar.setCenter(w/2, h/2);
       if(!lv2_4Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv4 p').classList.add('wrong');
+	      document.querySelector('#lv4 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -271,14 +279,20 @@ const lv2_4 = (userInput, cm) => {
 				s.stroke('#77bd98');
 				s.polarTriangle(270, 40, 80);
 	      example4.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv4 p').classList == 'wrong') {
+	      	document.querySelector('#lv4 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv4 p').classList.add('pass');
+	      document.querySelector('#lv4 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let nextLevel = '<h3>Congratulations! (*´▽`*)</h3>'
-		      + '<p>You just learned how to draw triangles with p5.Polar single drawing function. ' 
-		      + '<b>Multiple drawing function will be introduced in the future</b>. '
-		      + 'Click the button below and move to the next level.</p>'
-		      + '<button onclick="window.location.href = \'../level/challenge_1.html\'">Next Level - Triangle</button>';
-	        document.getElementById('intro').innerHTML = nextLevel;
+	      	let nextLevel = '<h3>Congratulations!</h3>'
+	      	+ '<p>You just learned how to draw triangles with p5.Polar single drawing function. '
+	      	+ '<b>Multiple drawing function will be introduced in the future</b>. '
+	      	+ '<br><br>'
+	      	+ 'Click the button below and move to the next level.</p>'
+	      	+ '<button onclick="window.location.href = \'../level/challenge_1.html\'">Next Level - Challenge &#8544;</button>';
+		      document.querySelector('#intro').innerHTML = nextLevel;
+		      document.querySelector('#lv4 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});

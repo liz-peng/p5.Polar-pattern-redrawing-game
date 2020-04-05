@@ -236,6 +236,7 @@ const lv1_4 = (userInput, cm) => {
 	if(document.getElementById('defaultCanvas14')) {
     document.getElementById('defaultCanvas14').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv4 p').innerHTML = '';
   } 
 
   const lv1_4Match = userInput.every(el => 

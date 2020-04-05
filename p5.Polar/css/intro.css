@@ -28,7 +28,25 @@ b {
   font-weight: 800;
 }
 
-hint {
+button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #d54e53;
+  border: none;
+  padding: 0.5em 0.5em;
+  margin: 2em 2em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bf464a;
+}
+
+task, hint {
   background: rgba(145, 151, 175, 0.7);
   color: #e9eaef;
   padding: 0 0.5em;
@@ -80,6 +98,7 @@ check {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 3;
   left: 0;
+  min-width: 140px;
 }
 
 .dropdown-content a {
@@ -103,7 +122,7 @@ check {
   display: grid;
   height: 100%;
   grid-template-rows: 5% 55% 23% 17%;
-  grid-template-columns: 40%;
+  grid-template-columns: 35%;
   grid-template-areas: "nav polar"
                        "intro polar"
                        "codemirror polar" 
@@ -118,7 +137,6 @@ check {
   background: #232F60;
   height: 100%;
   align-items: center;
-  z-index: -1 !important;
 }
 
 #intro {
@@ -136,7 +154,6 @@ check {
   border-bottom: 4px solid #9fabba;
   padding-top: 15px;
   padding-right: 15px;
-  z-index: -1 !important;
 }
 
 #console {
@@ -170,6 +187,20 @@ check {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   z-index: 1;
+}
+
+#lv {
+  grid-area: polar;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  z-index: 1;
+  font-size: 12px;
+  color: #9fabba;
+}
+
+#lv1, #lv2, #lv3, #lv4, #lv5, #lv6, #lv7, #lv8, #lv9 {
+  padding: 10px 0 0 10px;
 }
 
 .col1-row1, .col1-row2  {

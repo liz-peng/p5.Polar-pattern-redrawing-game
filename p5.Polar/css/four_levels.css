@@ -207,6 +207,10 @@ check {
   color: #9fabba;
 }
 
+#lv p {
+  font-size: 16px;
+}
+
 #lv p.wrong {
   color: #ce5a57;
 }

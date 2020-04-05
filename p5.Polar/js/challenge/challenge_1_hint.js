@@ -12,8 +12,6 @@ let m1 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Challenge 1.1', -w/3-50, -h/3-30);
-    m.text('Line Radius 120', -w/3-50, -h/3-15);
     m.text('0°', -3, -130);
   }; 
 };
@@ -33,8 +31,6 @@ let m2 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Challenge 1.2', -w/3-50, -h/3-30);
-    m.text('Line Radius 120', -w/3-50, -h/3-15);
     m.text('0°', -3, -130);
     m.text('45°', 94, -90);
     m.text('90°', 132, 2);
@@ -57,10 +53,6 @@ let m3 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Challenge 1.3', -w/3-50, -h/3-30);
-    m.text('Line Radius 120', -w/3-50, -h/3-15);
-    m.text('Triangle Radius 80', -w/3-50, -h/3);
-    m.text('Distance 40', -w/3-50, -h/3+15);
     m.text('0°', -3, -130);
     m.text('45°', 94, -90);
     m.text('90°', 132, 2);
@@ -83,10 +75,6 @@ let m4 = function(m) {
     // text starts from here
     m.textSize(11);
     m.fill(204, 204, 204, 150);
-    m.text('# Challenge 1.4', -w/3-50, -h/3-30);
-    m.text('Line Radius 120', -w/3-50, -h/3-15);
-    m.text('Triangle Radius 80', -w/3-50, -h/3);
-    m.text('Distance 40', -w/3-50, -h/3+15);
     m.text('0°', -3, -130);
     m.text('45°', 94, -90);
     m.text('90°', 132, 2);

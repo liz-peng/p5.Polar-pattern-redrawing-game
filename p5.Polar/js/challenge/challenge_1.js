@@ -13,6 +13,7 @@ const lvch1_1 = (userInput, cm) => {
 	if(document.getElementById('defaultCanvas8')) {
     document.getElementById('defaultCanvas8').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv1 p').innerHTML = '';
   } 
 
   const lvch1_1Ans = userInput.every(el => 
@@ -21,32 +22,35 @@ const lvch1_1 = (userInput, cm) => {
 	
 	let draw1 = (s) => { 
     s.setup = () => {
-      let w = document.getElementById('sketch1').clientWidth;
-      let h = document.getElementById('sketch1').clientHeight;
+      let w = document.getElementById('draw1').clientWidth;
+      let h = document.getElementById('draw1').clientHeight;
       s.createCanvas(w, h);
       s.noFill();
       polar.setCenter(w/2, h/2+15);
       if(!lvch1_1Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv1 p').classList.add('wrong');
+	      document.querySelector('#lv1 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
       	s.stroke('#daf8e3');
 	      s.polarLine(0, 120, 0);
 	      example1.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv1 p').classList == 'wrong') {
+	      	document.querySelector('#lv1 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv1 p').classList.add('pass');
+	      document.querySelector('#lv1 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let lvch1_2Val = '<h4>Challenge 1.2 Line & Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint><br>' 
-	          + 'Draw three more lines.</p>'
-	          + '<p><hint><b>Hint</b></hint><br>'
-	          + '<b>polarLine(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b><br>'
-	          + '<b>polarTriangle(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b></p>'
-	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
-		      document.getElementById('intro').innerHTML = lvch1_2Val;
+		      let lvch1_2Title = 'Challenge 1.2 Line & Triangle';
+		      let lvch1_2Task = '<task>Task</task>'
+	          + '<br>Draw three more lines with <b>radius 120</b>.';
+		      document.querySelector('#intro h4').innerText = lvch1_2Title;
+		      document.getElementsByTagName('p')[0].innerHTML = lvch1_2Task;
+		      document.querySelector('#lv1 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		    }, 1000);
 	    }
@@ -79,6 +83,7 @@ const lvch1_2 = (userInput, cm) => {
 	if(document.getElementById('defaultCanvas9')) {
     document.getElementById('defaultCanvas9').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv2 p').innerHTML = '';
   } 
 
   const lvch1_2Match = userInput.every(el => 
@@ -97,10 +102,11 @@ const lvch1_2 = (userInput, cm) => {
       s.noFill();
       polar.setCenter(w/2, h/2+15);
       if(!lvch1_2Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv2 p').classList.add('wrong');
+	      document.querySelector('#lv2 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -113,16 +119,18 @@ const lvch1_2 = (userInput, cm) => {
 		    s.stroke('#0086ad');
 		    s.polarLine(135, 120, 0);
 	      example2.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv2 p').classList == 'wrong') {
+	      	document.querySelector('#lv2 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv2 p').classList.add('pass');
+	      document.querySelector('#lv2 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let lvch1_3Val = '<h4>Challenge 1.3 Line & Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint><br>' 
-	          + 'Draw one triangle.</p>'
-	          + '<p><hint><b>Hint</b></hint><br>'
-	          + '<b>polarLine(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b><br>'
-	          + '<b>polarTriangle(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b></p>'
-	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
-		      document.getElementById('intro').innerHTML = lvch1_3Val;
+	      	let lvch1_3Title = 'Challenge 1.3 Line & Triangle';
+		      let lvch1_3Task = '<task>Task</task>'
+	          + '<br>Draw one triangle with <b>radius 80</b> and move <b>40 distance</b> from center point.'
+		      document.querySelector('#intro h4').innerText = lvch1_3Title;
+		      document.getElementsByTagName('p')[0].innerHTML = lvch1_3Task;
+		      document.querySelector('#lv2 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		    }, 1000);
 	    }
@@ -168,16 +176,17 @@ const lvch1_3 = (userInput, cm) => {
 
 	let draw3 = (s) => { 
     s.setup = () => {
-      let w = document.getElementById('sketch3').clientWidth;
-      let h = document.getElementById('sketch3').clientHeight;
+      let w = document.getElementById('draw3').clientWidth;
+      let h = document.getElementById('draw3').clientHeight;
       s.createCanvas(w, h);
       s.noFill();
       polar.setCenter(w/2, h/2+15);
       if(!lvch1_3Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv3 p').classList.add('wrong');
+	      document.querySelector('#lv3 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -192,16 +201,18 @@ const lvch1_3 = (userInput, cm) => {
 		    s.stroke('#f7cac9');
 		    s.polarTriangle(0, 80, 40);
 	      example3.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv3 p').classList == 'wrong') {
+	      	document.querySelector('#lv3 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv3 p').classList.add('pass');
+	      document.querySelector('#lv3 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let lvch1_4Val = '<h4>Challenge 1.4 Line & Triangle</h4>'
-	          + '<p><hint><b>Task</b></hint><br>' 
-	          + 'Draw seven more triangles with different angles.</p>'
-	          + '<p><hint><b>Hint</b></hint><br>'
-	          + '<b>polarLine(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b><br>'
-	          + '<b>polarTriangle(<func>angle</func>, <func>radius</func>, <func>distance</func>)</b></p>'
-	          + '<p>* Type your answer in the box below and execute the code with <key><b>Shift + Enter</b></key> keys</p>';
-		      document.getElementById('intro').innerHTML = lvch1_4Val;
+	      	let lvch1_4Title = 'Challenge 1.4 Line & Triangle';
+		      let lvch1_4Task = '<task>Task</task>'
+	          + '<br>Draw seven more triangles with <b>radius 80</b> and move <b>40 distance</b>.';
+		      document.querySelector('#intro h4').innerText = lvch1_4Title;
+		      document.getElementsByTagName('p')[0].innerHTML = lvch1_4Task;
+		      document.querySelector('#lv3 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		    }, 1000);
 	    }
@@ -242,6 +253,7 @@ const lvch1_4 = (userInput, cm) => {
 	if(document.getElementById('defaultCanvas11')) {
     document.getElementById('defaultCanvas11').remove();
     document.getElementById('msg').innerText = '';
+    document.querySelector('#lv4 p').innerHTML = '';
   } 
 
   const lvch1_4Match = userInput.every(el => 
@@ -254,16 +266,17 @@ const lvch1_4 = (userInput, cm) => {
 
 	let draw4 = (s) => { 
     s.setup = () => {
-      let w = document.getElementById('sketch4').clientWidth;
-      let h = document.getElementById('sketch4').clientHeight;
+      let w = document.getElementById('draw4').clientWidth;
+      let h = document.getElementById('draw4').clientHeight;
       s.createCanvas(w, h);
       s.noFill();
       polar.setCenter(w/2, h/2+15);
       if(!lvch1_4Ans) {
-      	s.stroke('#ccc');
-      	s.strokeWeight(1); 
+      	s.stroke('#e7454f');
+      	s.strokeWeight(2); 
 	      eval(userInput.join());
-	      document.getElementById('msg').innerHTML = '<check>Try Again!</check>';
+	      document.querySelector('#lv4 p').classList.add('wrong');
+	      document.querySelector('#lv4 p').innerHTML = '<b>Try Again</b>';
 	    }
 	    else {
       	s.strokeWeight(1); 
@@ -292,12 +305,18 @@ const lvch1_4 = (userInput, cm) => {
 			  s.stroke('#f6a48e');
 			  s.polarTriangle(315, 80, 40);
 	      example4.drawingContext.lineWidth = 1;
-	      document.getElementById('msg').innerHTML = '<check>Pass! (*´▽`*)</check>';
+	      if(document.querySelector('#lv4 p').classList == 'wrong') {
+	      	document.querySelector('#lv4 p').classList.remove('wrong')
+	      }
+	      document.querySelector('#lv4 p').classList.add('pass');
+	      document.querySelector('#lv4 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let nextLevel = '<h3>Congratulations! (*´▽`*)</h3>'
-		      + '<p>You mastered the first ultimate challenge!<br>'
-		      + '<b>More levels coming soon!</b></p>';
-	        document.getElementById('intro').innerHTML = nextLevel;
+		      let nextLevel = '<h3>Congratulations!</h3>'
+	      	+ '<p>You mastered the first ultimate challenge! '
+	      	+ '<br><br>'
+	      	+ '<b>More levels coming soon.</b></p>.';
+		      document.querySelector('#intro').innerHTML = nextLevel;
+		      document.querySelector('#lv4 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
 		      cm.setValue('// type your code here\n');
 		      cm.setCursor({line: 1});

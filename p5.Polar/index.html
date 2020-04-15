@@ -48,37 +48,13 @@
           <div id="msg"></div>
         </div>
         <div id='lv'>
-          <div id='lv1' class=''># Lv 1.1<p></p></div>
-          <div id='lv2' class=''># Lv 1.2<p></p></div>
-          <div id='lv3' class=''># Lv 1.3<p></p></div>
-          <div id='lv4' class=''># Lv 1.4<p></p></div>
-          <div id='lv5' class=''># Lv 1.5<p></p></div>
-          <div id='lv6' class=''># Lv 1.6<p></p></div>
-          <div id='lv7' class=''># Lv 1.7<p></p></div>
-          <div id='lv8' class=''># Lv 1.8<p></p></div>
-          <div id='lv9' class=''># Lv 1.9<p></p></div>
+          <div id='lv1' class=''># Lv Example<p></p></div>
         </div>
         <div id='userDrawing'>
           <div id='draw1' class=''></div>
-          <div id='draw2' class=''></div>
-          <div id='draw3' class=''></div>
-          <div id='draw4' class=''></div>
-          <div id='draw5' class=''></div>
-          <div id='draw6' class=''></div>
-          <div id='draw7' class=''></div>
-          <div id='draw8' class=''></div>
-          <div id='draw9' class=''></div>
         </div>
         <div id='polarExample'>
           <div id='sketch1' class='col1-row1'></div>
-          <div id='sketch2' class='col2-row1'></div>
-          <div id='sketch3' class='col3-row1'></div>
-          <div id='sketch4' class='col1-row2'></div>
-          <div id='sketch5' class='col2-row2'></div>
-          <div id='sketch6' class='col3-row2'></div>
-          <div id='sketch7' class='col1-row3'></div>
-          <div id='sketch8' class='col2-row3'></div>
-          <div id='sketch9' class='col3-row3'></div>
         </div>
       </div>
     </div>
@@ -86,7 +62,10 @@
   <script>
     window.onload = () => {
       const editor = CodeMirror(document.querySelector('#codemirror'), { 
-        value: '// type your code here\n',
+        value: '// Example\n'
+          + 'polarEllipses(6, 120, 120)\n'
+          + 'polarTriangles(2, 240, 0)'
+          + '\n',
         mode: 'javascript',
         lineWrapping: true,
         viewportMargin: Infinity,
@@ -96,7 +75,7 @@
         theme: 'tomorrow-night-bright'
       });
       editor.focus();
-      editor.setCursor({line: 1});
+      editor.setCursor({line: 3});
     }
   </script>
 </html>

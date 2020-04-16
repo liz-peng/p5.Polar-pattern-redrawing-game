@@ -10,9 +10,6 @@ Level demo:
 ![alt text](https://i.imgur.com/wWBIKfI.png "user instruction") 
 
 Level demo:
-![alt text](https://i.imgur.com/xQcGluq.png "user instruction") 
-
-Level demo:
 ![alt text](https://i.imgur.com/QpjBBtu.png "level demo") 
 
 Level demo:

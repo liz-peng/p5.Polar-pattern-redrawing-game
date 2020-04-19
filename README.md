@@ -1,4 +1,4 @@
-# p5.Polar-Playground
+# p5.Polar Coding Game
 
 **[WIP]**  This is a web editor (live coding environment) that helps [p5.js](https://p5js.org/) users to learn how to draw geometric patterns easier with [p5.Polar](https://github.com/liz-peng/p5.Polar) library.
 

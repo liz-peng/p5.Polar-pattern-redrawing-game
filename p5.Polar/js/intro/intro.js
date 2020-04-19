@@ -8,13 +8,13 @@ let sketch1 = function(p) {
     p.strokeWeight(0.7); 
     polar.setCenter(w/2, h/2);
     p.stroke('#ffc425');
-    p.polarEllipses(6, 120, 120);
+    p.polarEllipses(6, 120, 120, 120);
     p.stroke('#f37735');
     p.polarTriangles(2, 240, 0);
     p.strokeWeight(0.5); 
     p.stroke('#ccc');
     p.polarLines(3, 300, 0);
-    p.polarEllipses(6, 8, 300);
+    p.polarEllipses(6, 8, 8, 300);
     p.polarHexagon(30, 240, 0);
     p.polarHexagons(2, 276, 0);
   }; 

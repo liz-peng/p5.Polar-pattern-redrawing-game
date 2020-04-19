@@ -12,7 +12,7 @@ let sketchExpRadius = function(e) {
     e.strokeWeight(0.5);
     e.stroke(204, 204, 204, 120);
     for(i=1; i<=4; i++) {
-      e.polarEllipse(0, i*20, 0);
+      e.polarEllipse(0, i*20, i*20, 0);
     }
     e.polarLines(3, 100, 0);
 
@@ -48,7 +48,7 @@ let sketchExpAngle = function(e) {
     e.strokeWeight(0.5);
     e.stroke(204, 204, 204, 120);
     for(i=1; i<=4; i++) {
-      e.polarEllipse(0, i*20, 0);
+      e.polarEllipse(0, i*20, i*20, 0);
     }
     e.polarLine(30, 50, 50);
     e.polarLines(3, 100, 0);
@@ -86,7 +86,7 @@ let sketchExpDis = function(e) {
     e.strokeWeight(0.5);
     e.stroke(204, 204, 204, 120);
     for(i=1; i<=4; i++) {
-      e.polarEllipse(0, i*20, 0);
+      e.polarEllipse(0, i*20, i*20, 0);
     }
     e.polarLine(30, 50, 50);
     e.polarLines(3, 100, 0);

@@ -6,7 +6,7 @@
 [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/)
 
 Level demo:
-![alt text](https://i.imgur.com/wWBIKfI.png "user instruction") 
+![alt text](https://i.imgur.com/KIstKzm.png "user instruction") 
 
 Level demo:
 ![alt text](https://i.imgur.com/QpjBBtu.png "level demo") 

@@ -19,6 +19,7 @@
           <a href='#' class='logo' onClick='window.location.reload()'>p5.Polar</a>
           <div class='nav-right'>
             <a href='https://github.com/liz-peng/p5.Polar' target='_blank' class='git'>GitHub</a>
+            <a href='../playground.html' class='playground'>Playground</a>
             <div class='dropdown'>
               <div class='level'>Level</div>
               <div class='dropdown-content'>
@@ -103,9 +104,11 @@
           try {
             let userInput = cm.getValue();
             userInput = userInput.split(/\n/).map(line => 
-              line.includes('polar') ? 's.' + line.trim().replace(/\s/g, '').replace(';', '') : ''
-            ).filter(el => 
+              line.startsWith('//')? '' : 's.' + line.trim().replace(/\s/g, '').replace(';', '')
+            ).filter(el =>
               el != ''
+            ).filter(el =>
+              el != 's.'
             );
 
             if(userInput.length === 0) {
@@ -125,6 +128,7 @@
             }
           }
           catch (error) {
+            error = error.toString().replace('s.', '');
             document.getElementById('msg').innerText = error;
           }
         }

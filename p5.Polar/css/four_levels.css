@@ -70,7 +70,7 @@ check {
   padding-left: 15px;
 }
 
-.git {
+.git, .playground {
   padding-right: 15px;
 }
 
@@ -78,7 +78,7 @@ check {
   cursor: pointer;
 }
 
-.git:hover, .level:hover  {
+.git:hover, .level:hover, .playground:hover  {
   color: #9c9c9c;
 }
 

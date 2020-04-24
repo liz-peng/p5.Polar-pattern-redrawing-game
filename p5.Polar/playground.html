@@ -119,7 +119,7 @@
             playground(userInput, cm);
           }
           catch (error) {
-            error = error.toString().replace('s.', '');
+            error = error.toString().split('s.').join('');
             document.getElementById('msg').innerText = error;
           }
         }

@@ -17,6 +17,7 @@
           <a href='#' class='logo' onClick='window.location.reload()'>p5.Polar</a>
           <div class='nav-right'>
             <a href='https://github.com/liz-peng/p5.Polar' target='_blank' class='git'>GitHub</a>
+            <a href='playground.html' class='playground'>Playground</a>
             <div class='dropdown'>
               <div class='level'>Level</div>
               <div class='dropdown-content'>
@@ -30,12 +31,12 @@
         <div id='intro'>
             <h1>Hello!</h1>
             <p>
-              This is a series of programming challenges for learning how to draw geometric and abstract patterns with <b><a href='https://github.com/liz-peng/p5.Polar' target='_blank' style='text-decoration: underline;'>p5.Polar</a></b> library. <i>p5.Polar</i> is a polar coordinate system for <b><a href='https://p5js.org/' target='_blank' style='text-decoration: underline;'>p5.js</a></b>. The library converts a polar coordinate to cartesian, and abstracts the mathematics required for making many types of geometric patterns.
+              A programming challenges for learning how to draw geometric and abstract patterns with <b><a href='https://github.com/liz-peng/p5.Polar' target='_blank' style='text-decoration: underline;'>p5.Polar</a></b> library. <i>p5.Polar</i> is a polar coordinate system for <b><a href='https://p5js.org/' target='_blank' style='text-decoration: underline;'>p5.js</a></b>. The library converts a polar coordinate to cartesian, and abstracts the mathematics required for making many types of geometric patterns.
               <br><br>
-              The right hand side are example images. Follow the example images, type your code in the box below, and learn how to draw geometric patterns through each levels.
+              The right hand side is the example image. Let's follow the example and redraw the images while learning to use p5.Polar library through each levels. Click red big button below and start coding!
             </p>
             <br>
-            <button onclick="window.location.href = 'level/line.html'">Click to start coding!</button>
+            <button onclick="window.location.href = 'level/line.html'">Level 1 - Line</button>
         </div>
         <div id='codemirror'></div>
         <div id='console'>
@@ -44,7 +45,7 @@
           <div id="msg"></div>
         </div>
         <div id='lv'>
-          <div id='lv1' class=''># Lv Example<p></p></div>
+          <div id='lv1'># Hello from p5.Polar. This is an example image.</div>
         </div>
         <div id='userDrawing'>
           <div id='draw1' class=''></div>
@@ -58,7 +59,7 @@
   <script>
     window.onload = () => {
       const editor = CodeMirror(document.querySelector('#codemirror'), { 
-        value: '// Example\n'
+        value: '// type your code here\n'
           + 'polarEllipses(6, 120, 120, 120)\n'
           + 'polarTriangles(2, 240, 0)'
           + '\n',

@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>p5.Polar</title>
+    <script src='../codemirror/lib/codemirror.js'></script>
+    <link href='./css/playground.css' rel='stylesheet'>
+    <link href='../codemirror/lib/codemirror.css' rel='stylesheet'>
+    <script src="../codemirror/mode/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="./js/polar.js"></script>
+    <script src="./js/playground/playground.js"></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='codeArea'>
+        <div id='nav'>
+          <a href='#' class='logo' onClick='window.location.reload()'>p5.Polar</a>
+          <div class='nav-right'>
+            <a href='https://github.com/liz-peng/p5.Polar' target='_blank' class='git'>GitHub</a>
+            <a href='#' class='playground'>Playground</a>
+            <div class='dropdown'>
+              <div class='level'>Level</div>
+              <div class='dropdown-content'>
+                <a href='level/line.html'>Line</a>
+                <a href='level/triangle.html'>Triangle</a>
+                <a href='level/challenge_1.html'><b>Challenge &#8544;</b></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='intro'>
+            <h1>p5.Polar Playground</h1>
+            <p>
+              <hint>Links</hint>
+              <br>
+              <a href='https://github.com/liz-peng/p5.Polar' target='_blank' style='text-decoration: underline;'>p5.Polar</a></b> library
+              <br>
+              <a href='https://p5js.org/reference/' target='_blank' style='text-decoration: underline;'>p5.js</a></b> built-in functions reference
+              <br><br>
+              <hint>p5.Polar Single Drawing functions</hint>
+              <br>
+              polarLine( <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarTriangle( <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarSquare( <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarPentagon( <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarHexagon( <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarHeptagon( <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarOctagon( <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarEllipse( <funcSingle>angle</funcSingle>, <funcSingle>widthRadius</funcSingle>, <funcSingle>heightRadius</funcSingle>, <funcSingle>[distance]</funcSingle> )
+              <br>
+              polarPolygon( <funcSingle>number</funcSingle>, <funcSingle>angle</funcSingle>, <funcSingle>radius</funcSingle> )
+              <br><br>
+              <hint>p5.Polar Multiple Drawing functions</hint>
+              <br>
+              polarLines( <funcMulti>number</funcMulti>, <funcMulti>radius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+              <br>
+              polarTriangles( <funcMulti>number</funcMulti>, <funcMulti>radius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+              <br>
+              polarSquares( <funcMulti>number</funcMulti>, <funcMulti>radius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+              <br>
+              polarPentagons( <funcMulti>number</funcMulti>, <funcMulti>radius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+              <br>
+              polarHexagons( <funcMulti>number</funcMulti>, <funcMulti>radius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+              <br>
+              polarHeptagons( <funcMulti>number</funcMulti>, <funcMulti>radius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+              <br>
+              polarOctagons( <funcMulti>number</funcMulti>, <funcMulti>radius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+              <br>
+              polarEllipses( <funcMulti>number</funcMulti>, <funcMulti>widthRadius</funcMulti>, <funcMulti>heightRadius</funcMulti>, <funcMulti>distance</funcMulti>, <funcMulti>[callback]</funcMulti> )
+            </p>
+        </div>
+        <div id='codemirror'></div>
+        <div id='console'>
+          <span>Console</span>
+          <hr>
+          <div id="msg"></div>
+        </div>
+        <div id='canvas'>
+          <div># Canvas</div>
+        </div>
+        <div id='userDrawing'>
+          <div id='draw1' class=''></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const editor = CodeMirror(document.querySelector('#codemirror'), { 
+        value: '// type your code here\n',
+        mode: 'javascript',
+        lineWrapping: true,
+        viewportMargin: Infinity,
+        lineNumbers: true,
+        autofocus: true,
+        theme: 'tomorrow-night-bright'
+      });
+      editor.focus();
+      editor.setCursor({line: 1});
+      editor.setOption('extraKeys', {
+        'Shift-Enter': (cm) => {
+          try {
+            let userInput = cm.getValue();
+            userInput = userInput.split(/\n/).map(line => 
+              line.startsWith('//')? '' : 's.' + line.trim().replace(/\s/g, '').replace(';', '')
+            ).filter(el =>
+              el != ''
+            ).filter(el =>
+              el != 's.'
+            );
+            // run the playground.js
+            playground(userInput, cm);
+          }
+          catch (error) {
+            error = error.toString().replace('s.', '');
+            document.getElementById('msg').innerText = error;
+          }
+        }
+      });
+    }
+  </script>
+</html>

@@ -311,10 +311,11 @@ const lvch1_4 = (userInput, cm) => {
 	      document.querySelector('#lv4 p').classList.add('pass');
 	      document.querySelector('#lv4 p').innerHTML = '<b>Pass!</b>';
 	      setTimeout(() => { 
-		      let nextLevel = '<h3>Congratulations!</h3>'
-	      	+ '<p>You mastered the first ultimate challenge! '
+		      let nextLevel = '<h3>You mastered the first ultimate challenge!</h3>'
+	      	+ '<p>More levels coming soon. '
 	      	+ '<br><br>'
-	      	+ '<b>More levels coming soon.</b></p>.';
+	      	+ 'If you are considering to use the library creating more patterns, '
+	      	+ 'try it out at the p5.Polar <a href="https://liz-peng.github.io/p5.Polar/playground.html" target="_blank" style="text-decoration: underline;"><b>playground</b></a></p>.';
 		      document.querySelector('#intro').innerHTML = nextLevel;
 		      document.querySelector('#lv4 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';

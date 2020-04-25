@@ -290,7 +290,7 @@ const lv2_4 = (userInput, cm) => {
 	      	+ '<b>Multiple drawing function will be introduced in the future</b>. '
 	      	+ '<br><br>'
 	      	+ 'Click the button below and move to the next level.</p>'
-	      	+ '<button onclick="window.location.href = \'../level/challenge_1.html\'">Next Level - Challenge &#8544;</button>';
+	      	+ '<button onclick="window.location.href = \'../level/challenge_1.html\'">Challenge &#8544;</button>';
 		      document.querySelector('#intro').innerHTML = nextLevel;
 		      document.querySelector('#lv4 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';

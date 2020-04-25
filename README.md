@@ -1,5 +1,5 @@
 # p5.Polar Game Lab
-### Geometric Patterns Coding Challenges
+### Geometric Patterns Coding Challenge
 
 **[WPI]** This is a programming challenge that helps [p5.js](https://p5js.org/) users to learn how to draw geometric and abstract patterns with [p5.Polar](https://github.com/liz-peng/p5.Polar) library.
 

@@ -123,6 +123,12 @@ funcMulti {
   padding: 0px 15px;
   overflow: scroll;
   position: relative;
+  ::-webkit-scrollbar { 
+    display: none;  /* Chrome Safari */
+  }
+  scrollbar-width: none; /* Firefox */
+  scrollbar-height: none;
+  -ms-overflow-style: none; 
 }
 
 #codemirror {

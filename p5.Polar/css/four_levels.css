@@ -143,14 +143,8 @@ check {
   grid-area: intro;
   color: #ccc;
   padding: 0px 15px;
-  overflow: scroll;
+  overflow: auto;
   position: relative;
-  ::-webkit-scrollbar { 
-    display: none;  /* Chrome Safari */
-  }
-  scrollbar-width: none; /* Firefox */
-  scrollbar-height: none;
-  -ms-overflow-style: none; 
 }
 
 #codemirror {
@@ -159,7 +153,6 @@ check {
   border-top: 5px solid #9fabba;
   border-bottom: 5px solid #9fabba;
   padding-top: 15px;
-  padding-right: 15px;
 }
 
 #console {

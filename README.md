@@ -5,14 +5,11 @@
 
 [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/)
 
-Level demo:
-![alt text](https://i.imgur.com/KIstKzm.png "user instruction") 
+Playground demo:
+![alt text](https://i.imgur.com/BkgNwoG.png "playground") 
 
 Level demo:
 ![alt text](https://i.imgur.com/QpjBBtu.png "level demo") 
 
 Level demo:
 ![alt text](https://imgur.com/TaFO9Xa.png "level demo") 
-
-Playground demo:
-![alt text](https://i.imgur.com/bSZfykx.png "playground") 

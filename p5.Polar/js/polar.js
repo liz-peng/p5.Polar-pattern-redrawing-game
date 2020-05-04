@@ -207,5 +207,5 @@ p5.prototype.polarPolygon = function(_edge, _angle, _radius) {
   for(let i=1; i<=_edge; i++) {
     this.vertex(this.cos(this.TWO_PI*i/_edge)*_radius, this.sin(this.TWO_PI*i/_edge)*_radius);
   }
-  this.endShape(CLOSE);
+  this.endShape(this.CLOSE);
 }

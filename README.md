@@ -9,7 +9,7 @@ Playground demo:
 ![alt text](https://imgur.com/r0ZHcRT.png "playground") 
 
 Playground demo:
-![alt text](https://imgur.com/qW19xC9.png "playground") 
+![alt text](https://imgur.com/SYA01LC.png "playground") 
 
 Level demo:
 ![alt text](https://i.imgur.com/QpjBBtu.png "level demo") 

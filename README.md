@@ -6,7 +6,10 @@
 [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/)
 
 Playground demo:
-![alt text](https://i.imgur.com/BkgNwoG.png "playground") 
+![alt text](https://imgur.com/r0ZHcRT.png "playground") 
+
+Playground demo:
+![alt text](https://imgur.com/qW19xC9.png "playground") 
 
 Level demo:
 ![alt text](https://i.imgur.com/QpjBBtu.png "level demo") 

@@ -80,7 +80,7 @@ p5.prototype.polarSquare = function(_angle, _radius, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
   const _radians = this.radians(_angle);
-  this.translate(this.sin(_radians)*_distance, this.cos(_radians)*_distance);
+  this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
   this.square(-_radius, -_radius, _radius*2);
 }

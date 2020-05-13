@@ -39,7 +39,7 @@ p5.prototype.polarEllipse = function(_angle, _radiusW, _radiusH, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
   const _radians = this.radians(_angle);
-  this.translate(this.sin(_radians)*_distance, this.cos(_radians)*_distance);
+  this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.ellipse(0, 0, _radiusW*2, _radiusH*2);
 }
 

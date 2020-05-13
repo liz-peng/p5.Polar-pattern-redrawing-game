@@ -199,9 +199,11 @@ p5.prototype.polarOctagons = function(_num, _radius, _distance, callback) {
 }
 
 // Polygon
-p5.prototype.polarPolygon = function(_edge, _angle, _radius) {
+p5.prototype.polarPolygon = function(_edge, _angle, _radius, _distance) {
   this.resetMatrix();
   this.translate(polar.center.x, polar.center.y);
+  const _radians = this.radians(_angle);
+  this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
   this.beginShape();
   for(let i=1; i<=_edge; i++) {

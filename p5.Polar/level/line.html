@@ -88,7 +88,8 @@
   <script>
     window.onload = () => {
       const editor = CodeMirror(document.querySelector('#codemirror'), { 
-        value: '// type your code here\n',
+        value: '// type your code here\n' + 
+          '// then hit Shift+Enter to run it\n',
         mode: 'javascript',
         lineWrapping: true,
         viewportMargin: Infinity,
@@ -97,7 +98,7 @@
         theme: 'tomorrow-night-bright'
       });
       editor.focus();
-      editor.setCursor({line: 1});
+      editor.setCursor({line: 2});
       editor.setOption('extraKeys', {
         'Shift-Enter': (cm) => {
           try {

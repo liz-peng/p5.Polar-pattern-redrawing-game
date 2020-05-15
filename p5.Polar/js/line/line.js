@@ -52,8 +52,8 @@ const lv1_1 = (userInput, cm) => {
 		      document.getElementsByTagName('p')[0].innerHTML = lv1_2Task;
 		      document.querySelector('#lv1 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
-		      cm.setValue('// type your code here\n');
-		      cm.setCursor({line: 1});
+		      cm.setValue('// type your code here\n// then hit Shift+Enter to run it\n');
+		      cm.setCursor({line: 2});
 		    }, 1500);
 	    }
     }; 
@@ -125,8 +125,8 @@ const lv1_2 = (userInput, cm) => {
 		      document.getElementsByTagName('p')[0].innerHTML = lv1_3Task;
 		      document.querySelector('#lv2 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
-		      cm.setValue('// type your code here\n');
-		      cm.setCursor({line: 1});
+		      cm.setValue('// type your code here\n// then hit Shift+Enter to run it\n');
+		      cm.setCursor({line: 2});
 		    }, 1500);
 	    }
     }; 
@@ -197,8 +197,8 @@ const lv1_3 = (userInput, cm) => {
 		      document.getElementsByTagName('p')[0].innerHTML = lv1_4Task;
 		      document.querySelector('#lv3 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
-		      cm.setValue('// type your code here\n');
-		      cm.setCursor({line: 1});
+		      cm.setValue('// type your code here\n// then hit Shift+Enter to run it\n');
+		      cm.setCursor({line: 2});
 		    }, 1500);
 	    }
     }; 
@@ -291,7 +291,7 @@ const lv1_4 = (userInput, cm) => {
 		      document.querySelector('#intro').innerHTML = nextLevel;
 		      document.querySelector('#lv4 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
-		      cm.setValue('// type your code here\n');
+		      cm.setValue('// Level complete');
 		      cm.setCursor({line: 1});
 		      cm.options.readOnly = true;
 		    }, 1500);

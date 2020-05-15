@@ -319,7 +319,7 @@ const lvch1_4 = (userInput, cm) => {
 		      document.querySelector('#intro').innerHTML = nextLevel;
 		      document.querySelector('#lv4 p').innerHTML = '';
 		      document.getElementById('msg').innerText = '';
-		      cm.setValue('// type your code here\n');
+		      cm.setValue('// Level complete');
 		      cm.setCursor({line: 1});
 		      cm.options.readOnly = true;
 		    }, 1000);

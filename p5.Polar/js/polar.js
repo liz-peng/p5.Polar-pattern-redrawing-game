@@ -211,3 +211,14 @@ p5.prototype.polarPolygon = function(_edge, _angle, _radius, _distance) {
   }
   this.endShape(this.CLOSE);
 }
+
+p5.prototype.polarPolygons = function(_num, _edge, _radius, _distance, callback) {
+  const _angle = 360/_num;
+  for(let i=1; i<=_num; i++) {
+    if(callback) {
+      const _result = callback(i, _angle, _edge, _radius, _distance);
+      this.polarPolygon(_result[2], _result[0]*_result[1], _result[3], _result[4]);
+    }
+    else this.polarPolygon(_edge, i*_angle, _radius, _distance);
+  }
+}

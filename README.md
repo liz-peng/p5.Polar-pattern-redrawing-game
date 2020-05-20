@@ -5,14 +5,8 @@
 
 [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/)
 
-Playground demo:
-![alt text](https://imgur.com/r0ZHcRT.png "playground") 
+Gameplay demo:
+![alt text](https://github.com/liz-peng/p5.Polar-coding-challenge/blob/master/demo/gameplay-demo.gif "level demo") 
 
 Playground demo:
-![alt text](https://imgur.com/mYtWmX5.png "playground") 
-
-Level demo:
-![alt text](https://i.imgur.com/QpjBBtu.png "level demo") 
-
-Level demo:
-![alt text](https://imgur.com/TaFO9Xa.png "level demo") 
+![alt text](https://github.com/liz-peng/p5.Polar-coding-challenge/blob/master/demo/playground-demo.gif "playground") 

@@ -4,7 +4,7 @@
 **[WPI]** This is a programming challenge that helps [p5.js](https://p5js.org/) users to learn how to draw geometric and abstract patterns with [p5.Polar](https://github.com/liz-peng/p5.Polar) library.
 
 ## Try it out
-Try three levels of single drawing function at here: [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/). More levels coming soon!
+Try the first three levels of single drawing function at here: [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/). More levels coming soon!
 
 ## Documentation
 The game been built based on [CodeMirror](https://codemirror.net/) with Vanilla JS, HTML5 and CSS3

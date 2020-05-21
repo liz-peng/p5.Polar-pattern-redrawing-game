@@ -6,6 +6,9 @@
 ## Try it out
 Try three levels of single drawing function at here: [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/). More levels coming soon!
 
+## Documentation
+The game been built based on [CodeMirror](https://codemirror.net/) with Vanilla JS, HTML5 and CSS3
+
 ## Demo
 
 Gameplay demo:

@@ -12,7 +12,7 @@ The game been built based on [CodeMirror](https://codemirror.net/) and [p5.js](h
 ## Demo
 
 Gameplay demo:
-![alt text](https://github.com/liz-peng/p5.Polar-coding-challenge/blob/master/demo/gameplay-demo.gif "level demo") 
+![alt text](https://imgur.com/lE5l5PT.gif "level demo") 
 
 Playground demo:
-![alt text](https://github.com/liz-peng/p5.Polar-coding-challenge/blob/master/demo/playground-demo.gif "playground") 
+![alt text](https://imgur.com/iEtZ2lP.gif "playground") 

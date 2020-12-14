@@ -1,4 +1,4 @@
-## [WIP] This is a pattern redrawing game for learning [p5.Polar](https://github.com/liz-peng/p5.Polar) library
+## [WIP] A pattern redrawing game for learning [p5.Polar](https://github.com/liz-peng/p5.Polar) library
 Try the first three levels of single drawing function here: [Single Drawing Function Demo](https://liz-peng.github.io/p5.Polar/). 
 
 ## Documentation
